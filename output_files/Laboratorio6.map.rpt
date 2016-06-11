@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Laboratorio6
-Sat Jun 11 13:29:35 2016
+Sat Jun 11 20:00:04 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -9,20 +9,45 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "FF_D_RISING:\LFSR:0:i0:bit0"
-  6. Port Connectivity Checks: "FF_D_RISING:\LFSR:1:i32:bit32"
-  7. Port Connectivity Checks: "FF_D_RISING:\LFSR:2:i32:bit32"
-  8. Port Connectivity Checks: "FF_D_RISING:\LFSR:3:i32:bit32"
-  9. Port Connectivity Checks: "FF_D_RISING:\LFSR:4:i32:bit32"
- 10. Port Connectivity Checks: "FF_D_RISING:\LFSR:5:i32:bit32"
- 11. Port Connectivity Checks: "FF_D_RISING:\LFSR:6:i32:bit32"
- 12. Port Connectivity Checks: "FF_D_RISING:\LFSR:7:i32:bit32"
- 13. Port Connectivity Checks: "FF_D_RISING:\LFSR:8:i32:bit32"
- 14. Port Connectivity Checks: "FF_D_RISING:\LFSR:9:i32:bit32"
- 15. Port Connectivity Checks: "FF_D_RISING:\LFSR:10:i32:bit32"
- 16. Port Connectivity Checks: "FF_D_RISING:\LFSR:11:i32:bit32"
- 17. Analysis & Elaboration Messages
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for ROM:ROM1|altsyncram:altsyncram_component|altsyncram_9sq3:auto_generated
+  6. Parameter Settings for User Entity Instance: DATA_BUFFER:ADDR_TO_7SEG
+  7. Parameter Settings for User Entity Instance: DF_HZ:Gen1HZ
+  8. Parameter Settings for User Entity Instance: ROM:ROM1|altsyncram:altsyncram_component
+  9. altsyncram Parameter Settings by Entity Instance
+ 10. Analysis & Elaboration Settings
+ 11. Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:2:BT"
+ 12. Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:1:BT"
+ 13. Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:0:BT"
+ 14. Port Connectivity Checks: "DF_HZ:Gen1HZ"
+ 15. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:0:i0:bit0"
+ 16. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:1:i32:bit32"
+ 17. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:2:i32:bit32"
+ 18. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:3:i32:bit32"
+ 19. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:4:i32:bit32"
+ 20. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:5:i32:bit32"
+ 21. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:6:i32:bit32"
+ 22. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:7:i32:bit32"
+ 23. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:8:i32:bit32"
+ 24. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:9:i32:bit32"
+ 25. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:10:i32:bit32"
+ 26. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:11:i32:bit32"
+ 27. Port Connectivity Checks: "DATA_BUFFER:ADDR_TO_7SEG"
+ 28. Port Connectivity Checks: "FF_D_RISING:LEDRD"
+ 29. Port Connectivity Checks: "Top_FSM:Gral_FSM"
+ 30. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:0:MUX_ADDR"
+ 31. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:1:MUX_ADDR"
+ 32. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:2:MUX_ADDR"
+ 33. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:3:MUX_ADDR"
+ 34. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:4:MUX_ADDR"
+ 35. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:5:MUX_ADDR"
+ 36. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:6:MUX_ADDR"
+ 37. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:7:MUX_ADDR"
+ 38. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:8:MUX_ADDR"
+ 39. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:9:MUX_ADDR"
+ 40. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:10:MUX_ADDR"
+ 41. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:11:MUX_ADDR"
+ 42. Analysis & Elaboration Messages
 
 
 
@@ -49,10 +74,10 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat Jun 11 13:29:35 2016       ;
+; Analysis & Elaboration Status      ; Successful - Sat Jun 11 20:00:04 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio6                                ;
-; Top-level Entity Name              ; LFSR_12                                     ;
+; Top-level Entity Name              ; Laboratorio6                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -72,9 +97,128 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                  ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance        ; IP Include File ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+; Altera ; ROM: 1-PORT  ; 15.1    ; N/A          ; N/A          ; |Laboratorio6|ROM:ROM1 ; ROM.vhd         ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Source assignments for ROM:ROM1|altsyncram:altsyncram_component|altsyncram_9sq3:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------+
+; Assignment                      ; Value              ; From ; To                               ;
++---------------------------------+--------------------+------+----------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                ;
++---------------------------------+--------------------+------+----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATA_BUFFER:ADDR_TO_7SEG ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; data_width     ; 12    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DF_HZ:Gen1HZ ;
++----------------+----------+-------------------------------+
+; Parameter Name ; Value    ; Type                          ;
++----------------+----------+-------------------------------+
+; freq           ; 50000000 ; Signed Integer                ;
++----------------+----------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:ROM1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------+
+; Parameter Name                     ; Value                ; Type                      ;
++------------------------------------+----------------------+---------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                   ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                   ;
+; WIDTH_A                            ; 16                   ; Signed Integer            ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer            ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer            ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WIDTH_B                            ; 1                    ; Signed Integer            ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer            ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer            ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                   ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer            ;
+; RAM_BLOCK_TYPE                     ; M9K                  ; Untyped                   ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer            ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; INIT_FILE                          ; ROM.mif              ; Untyped                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer            ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer            ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                   ;
+; CBXI_PARAMETER                     ; altsyncram_9sq3      ; Untyped                   ;
++------------------------------------+----------------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                     ;
++-------------------------------------------+------------------------------------------+
+; Name                                      ; Value                                    ;
++-------------------------------------------+------------------------------------------+
+; Number of entity instances                ; 1                                        ;
+; Entity Instance                           ; ROM:ROM1|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                      ;
+;     -- WIDTH_A                            ; 16                                       ;
+;     -- NUMWORDS_A                         ; 4096                                     ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                   ;
+;     -- WIDTH_B                            ; 1                                        ;
+;     -- NUMWORDS_B                         ; 0                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                             ;
+;     -- RAM_BLOCK_TYPE                     ; M9K                                      ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                ;
++-------------------------------------------+------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -83,7 +227,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; LFSR_12            ; Laboratorio6       ;
+; Top-level entity name                                                      ; Laboratorio6       ; Laboratorio6       ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -164,112 +308,315 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:0:i0:bit0" ;
-+-------+-------+----------+------------------------------+
-; Port  ; Type  ; Severity ; Details                      ;
-+-------+-------+----------+------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                 ;
-+-------+-------+----------+------------------------------+
-
-
 +-----------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:1:i32:bit32" ;
+; Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:2:BT" ;
 +-------+-------+----------+--------------------------------+
 ; Port  ; Type  ; Severity ; Details                        ;
 +-------+-------+----------+--------------------------------+
+; d     ; Input ; Info     ; Stuck at GND                   ;
 ; reset ; Input ; Info     ; Stuck at GND                   ;
 +-------+-------+----------+--------------------------------+
 
 
 +-----------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:2:i32:bit32" ;
+; Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:1:BT" ;
 +-------+-------+----------+--------------------------------+
 ; Port  ; Type  ; Severity ; Details                        ;
 +-------+-------+----------+--------------------------------+
+; d     ; Input ; Info     ; Stuck at GND                   ;
 ; reset ; Input ; Info     ; Stuck at GND                   ;
 +-------+-------+----------+--------------------------------+
 
 
 +-----------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:3:i32:bit32" ;
+; Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:0:BT" ;
 +-------+-------+----------+--------------------------------+
 ; Port  ; Type  ; Severity ; Details                        ;
 +-------+-------+----------+--------------------------------+
+; d     ; Input ; Info     ; Stuck at GND                   ;
 ; reset ; Input ; Info     ; Stuck at GND                   ;
 +-------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DF_HZ:Gen1HZ"                                                                                ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; selfreq[1..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; selfreq[2]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ledout        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; display1      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; display0      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:0:i0:bit0" ;
++-------+-------+----------+-------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                   ;
++-------+-------+----------+-------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                              ;
++-------+-------+----------+-------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:1:i32:bit32" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                ;
++-------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:2:i32:bit32" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                ;
++-------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:3:i32:bit32" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                ;
++-------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:4:i32:bit32" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                ;
++-------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:5:i32:bit32" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                ;
++-------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:6:i32:bit32" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                ;
++-------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:7:i32:bit32" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                ;
++-------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:8:i32:bit32" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                ;
++-------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:9:i32:bit32" ;
++-------+-------+----------+---------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                     ;
++-------+-------+----------+---------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                ;
++-------+-------+----------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:10:i32:bit32" ;
++-------+-------+----------+----------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                      ;
++-------+-------+----------+----------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                 ;
++-------+-------+----------+----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:11:i32:bit32" ;
++-------+-------+----------+----------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                      ;
++-------+-------+----------+----------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                 ;
++-------+-------+----------+----------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "DATA_BUFFER:ADDR_TO_7SEG" ;
++-------+-------+----------+---------------------------+
+; Port  ; Type  ; Severity ; Details                   ;
++-------+-------+----------+---------------------------+
+; clear ; Input ; Info     ; Stuck at GND              ;
++-------+-------+----------+---------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "FF_D_RISING:LEDRD" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; set  ; Input ; Info     ; Stuck at GND        ;
+; en   ; Input ; Info     ; Stuck at VCC        ;
++------+-------+----------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Top_FSM:Gral_FSM"                                                                              ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; address[19..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:0:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:1:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:2:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:3:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:4:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:5:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:6:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:7:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:8:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:9:MUX_ADDR" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                 ;
+; in3    ; Input ; Info     ; Stuck at GND                 ;
+; sel[1] ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
 
 
 +-----------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:4:i32:bit32" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:10:MUX_ADDR" ;
++--------+-------+----------+-------------------------------+
+; Port   ; Type  ; Severity ; Details                       ;
++--------+-------+----------+-------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                  ;
+; in3    ; Input ; Info     ; Stuck at GND                  ;
+; sel[1] ; Input ; Info     ; Stuck at GND                  ;
++--------+-------+----------+-------------------------------+
 
 
 +-----------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:5:i32:bit32" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:6:i32:bit32" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:7:i32:bit32" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:8:i32:bit32" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:9:i32:bit32" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:10:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:11:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
+; Port Connectivity Checks: "MUX_4_1:\REG_ADDR:11:MUX_ADDR" ;
++--------+-------+----------+-------------------------------+
+; Port   ; Type  ; Severity ; Details                       ;
++--------+-------+----------+-------------------------------+
+; in2    ; Input ; Info     ; Stuck at GND                  ;
+; in3    ; Input ; Info     ; Stuck at GND                  ;
+; sel[1] ; Input ; Info     ; Stuck at GND                  ;
++--------+-------+----------+-------------------------------+
 
 
 +---------------------------------+
@@ -278,26 +625,140 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sat Jun 11 13:29:17 2016
+    Info: Processing started: Sat Jun 11 19:59:46 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio6 -c Laboratorio6 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file top_fsm.vhd
+    Info (12022): Found design unit 1: Top_FSM-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 30
+    Info (12023): Found entity 1: Top_FSM File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: rom-SYN File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 53
+    Info (12023): Found entity 1: ROM File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file laboratorio6.vhd
+    Info (12022): Found design unit 1: Laboratorio6-BEH File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 31
+    Info (12023): Found entity 1: Laboratorio6 File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ff_d_rising.vhd
+    Info (12022): Found design unit 1: FF_D_RISING-flow File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_RISING.vhd Line: 20
+    Info (12023): Found entity 1: FF_D_RISING File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_RISING.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ff_d_falling.vhd
+    Info (12022): Found design unit 1: FF_D_FALLING-flow File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_FALLING.vhd Line: 19
+    Info (12023): Found entity 1: FF_D_FALLING File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_FALLING.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file df_hz.vhd
+    Info (12022): Found design unit 1: DF_HZ-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/DF_HZ.vhd Line: 27
+    Info (12023): Found entity 1: DF_HZ File: E:/Mega/Facultad/FPGA/Laboratorio6/DF_HZ.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file control_ram_fsm_tb.vhd
+    Info (12022): Found design unit 1: Control_RAM_FSM_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd Line: 8
+    Info (12023): Found entity 1: Control_RAM_FSM_TB File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file control_ram_fsm.vhd
+    Info (12022): Found design unit 1: Control_RAM_FSM-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM.vhd Line: 23
+    Info (12023): Found entity 1: Control_RAM_FSM File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
+    Info (12022): Found design unit 1: Comparador-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/Comparador.vhd Line: 17
+    Info (12023): Found entity 1: Comparador File: E:/Mega/Facultad/FPGA/Laboratorio6/Comparador.vhd Line: 5
 Info (12021): Found 1 design units, including 0 entities, in source file lab6_package.vhd
-    Info (12022): Found design unit 1: Lab6_Pack File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Lab6_Package.vhd Line: 5
+    Info (12022): Found design unit 1: Lab6_Pack File: E:/Mega/Facultad/FPGA/Laboratorio6/Lab6_Package.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_12_tb.vhd
-    Info (12022): Found design unit 1: LFSR_12_TB-test File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 7
-    Info (12023): Found entity 1: LFSR_12_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_12_TB-test File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 7
+    Info (12023): Found entity 1: LFSR_12_TB File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_12.vhd
-    Info (12022): Found design unit 1: LFSR_12-shift File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd Line: 22
-    Info (12023): Found entity 1: LFSR_12 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd Line: 8
-Info (12127): Elaborating entity "LFSR_12" for the top level hierarchy
-Warning (12125): Using design file ff_d_rising.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: FF_D_RISING-flow File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ff_d_rising.vhd Line: 20
-    Info (12023): Found entity 1: FF_D_RISING File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ff_d_rising.vhd Line: 5
-Info (12128): Elaborating entity "FF_D_RISING" for hierarchy "FF_D_RISING:\LFSR:11:i32:bit32" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd Line: 48
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 803 megabytes
-    Info: Processing ended: Sat Jun 11 13:29:35 2016
+    Info (12022): Found design unit 1: LFSR_12-shift File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12.vhd Line: 21
+    Info (12023): Found entity 1: LFSR_12 File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file mux_4_1.vhd
+    Info (12022): Found design unit 1: MUX_4_1-flujo File: E:/Mega/Facultad/FPGA/Laboratorio6/MUX_4_1.vhd Line: 13
+    Info (12023): Found entity 1: MUX_4_1 File: E:/Mega/Facultad/FPGA/Laboratorio6/MUX_4_1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file data_buffer.vhd
+    Info (12022): Found design unit 1: DATA_BUFFER-BEH File: E:/Mega/Facultad/FPGA/Laboratorio6/DATA_BUFFER.vhd Line: 18
+    Info (12023): Found entity 1: DATA_BUFFER File: E:/Mega/Facultad/FPGA/Laboratorio6/DATA_BUFFER.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file dec_hex_7seg.vhd
+    Info (12022): Found design unit 1: DEC_HEX_7SEG-DECOD File: E:/Mega/Facultad/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd Line: 13
+    Info (12023): Found entity 1: DEC_HEX_7SEG File: E:/Mega/Facultad/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd Line: 4
+Info (12127): Elaborating entity "Laboratorio6" for the top level hierarchy
+Info (12128): Elaborating entity "MUX_4_1" for hierarchy "MUX_4_1:\REG_ADDR:11:MUX_ADDR" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 54
+Info (12128): Elaborating entity "Control_RAM_FSM" for hierarchy "Control_RAM_FSM:RAM_FSM" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 64
+Info (12128): Elaborating entity "Top_FSM" for hierarchy "Top_FSM:Gral_FSM" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 78
+Warning (10631): VHDL Process Statement warning at Top_FSM.vhd(40): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at Top_FSM.vhd(124): signal "Clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 124
+Info (10041): Inferred latch for "next_state.BLINK_LED" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.ERROR_DATO" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.FINRD" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.COMPARE" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.ESPERARD" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.INITRD" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.PRENDERLED" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.LOADDATA" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.ESPERAWR" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.INITWR" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (10041): Inferred latch for "next_state.IDLE" at Top_FSM.vhd(40) File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
+Info (12128): Elaborating entity "FF_D_RISING" for hierarchy "FF_D_RISING:LEDRD" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 100
+Info (12128): Elaborating entity "DATA_BUFFER" for hierarchy "DATA_BUFFER:ADDR_TO_7SEG" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at DATA_BUFFER.vhd(23): signal "CLEAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Mega/Facultad/FPGA/Laboratorio6/DATA_BUFFER.vhd Line: 23
+Info (12128): Elaborating entity "DEC_HEX_7SEG" for hierarchy "DEC_HEX_7SEG:DISP0OUT" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 119
+Info (12128): Elaborating entity "LFSR_12" for hierarchy "LFSR_12:LFSR" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 123
+Info (12128): Elaborating entity "DF_HZ" for hierarchy "DF_HZ:Gen1HZ" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 130
+Info (12128): Elaborating entity "DEC_HEX_7SEG" for hierarchy "DF_HZ:Gen1HZ|DEC_HEX_7SEG:DEC1" File: E:/Mega/Facultad/FPGA/Laboratorio6/DF_HZ.vhd Line: 113
+Info (12128): Elaborating entity "FF_D_FALLING" for hierarchy "FF_D_FALLING:\RISING_BTS:0:BT" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 140
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 150
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:ROM1|altsyncram:altsyncram_component" File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 60
+Info (12130): Elaborated megafunction instantiation "ROM:ROM1|altsyncram:altsyncram_component" File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 60
+Info (12133): Instantiated megafunction "ROM:ROM1|altsyncram:altsyncram_component" with the following parameter: File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 60
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "ROM.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "M9K"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9sq3.tdf
+    Info (12023): Found entity 1: altsyncram_9sq3 File: E:/Mega/Facultad/FPGA/Laboratorio6/db/altsyncram_9sq3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_9sq3" for hierarchy "ROM:ROM1|altsyncram:altsyncram_component|altsyncram_9sq3:auto_generated" File: c:/altera_lite/15.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "Comparador" for hierarchy "Comparador:COMP" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 156
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 857 megabytes
+    Info: Processing ended: Sat Jun 11 20:00:04 2016
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Total CPU time (on all processors): 00:00:43
 
 

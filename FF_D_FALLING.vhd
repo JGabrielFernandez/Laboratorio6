@@ -14,7 +14,7 @@ entity FF_D_FALLING is
 		-- Output ports
 		Q	: out std_logic
 	);
-end FF_D_RISING;
+end FF_D_FALLING;
 
 architecture flow of FF_D_FALLING is
 begin

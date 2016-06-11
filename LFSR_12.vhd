@@ -11,7 +11,6 @@ entity LFSR_12 is
 		-- Input ports
 		Clk	: in  std_logic;		--Entrada de reloj
 		Set	: in	std_logic;		--Entrada de seteo
-		Reset	: in	std_logic;
 		En		: in	std_logic;
 
 		-- Output ports

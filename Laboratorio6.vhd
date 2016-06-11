@@ -20,31 +20,53 @@ ENTITY Laboratorio6 IS
 		LB			:	OUT	STD_LOGIC;
 		UB			:	OUT	STD_LOGIC;
 		DATA_BUS	:	INOUT	STD_LOGIC_VECTOR(data_width-1 DOWNTO 0);
-		ADDRESS	:	OUT	STD_LOGIC_VECTOR(addr_width-1 DOWNTO 0);
+		ADDRESS	:	OUT	STD_LOGIC_VECTOR(RAM_addr_width-1 DOWNTO 0);
 		
 		DISP0		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
 		DISP1		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
-		DISP2		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
-		DISP3		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
-		DISP4		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0)
+		DISP2		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0)
+		);
 END ENTITY;
 
 ARCHITECTURE BEH OF Laboratorio6 IS
 
-SIGNAL READY_MEM, READY_GRAL:	STD_LOGIC;
-SIGNAL RDWRINT,ENRDWR:	STD_LOGIC;
-SIGNAL COMPOUT;
-
+SIGNAL CLK1HZ						:	STD_LOGIC;
+SIGNAL ADDR,ADDR_LFSR			:	STD_LOGIC_VECTOR(addr_width-1 DOWNTO 0);
+SIGNAL ADDR_FSM					:	STD_LOGIC_VECTOR(RAM_addr_width-1 DOWNTO 0);
+SIGNAL BTS							: 	STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL READY_MEM, READY_GRAL	:	STD_LOGIC;
+SIGNAL RDWRINT,ENRDWR			:	STD_LOGIC;
+SIGNAL COMPOUT						:	STD_LOGIC;
+SIGNAL ADDR_SEL, BTSET			:	STD_LOGIC;
+SIGNAL LEDR							:	STD_LOGIC;
+SIGNAL SETLFSR,ENLFSR			:	STD_LOGIC;
+SIGNAL ADDR2SHOW					:	STD_LOGIC_VECTOR(addr_width-1 DOWNTO 0);
+SIGNAL EN7SEG						:	STD_LOGIC;
+SIGNAL DATA_ROM					:	STD_LOGIC_VECTOR(data_width-1 DOWNTO 0);
 
 BEGIN
+ADDRESS(RAM_addr_width-1 downto addr_width)<= (others=>'0');
+ADDRESS(addr_width-1 downto 0)<= ADDR;
 RDWR<=RDWRINT;
+DATA_BUS <= DATA_ROM WHEN (RDwRINT='1') ELSE (OTHERS=>'Z') ;
+
+REG_ADDR: for i in addr_width-1 downto 0 generate
+	MUX_ADDR: MUX_4_1 port map(
+		in0	=>	ADDR_FSM(i),
+		in1	=>	ADDR_LFSR(i),
+		in2	=>	'0',
+		in3	=>	'0',
+		sel	=>	('0',ADDR_SEL),
+		out1	=>	ADDR(i)
+	);
+end generate;
+
 RAM_FSM: Control_RAM_FSM port map(
 	Clk				=>	CLK,
 	Ext_ready		=>	READY_GRAL,
 	Reset				=>	RESET,
 	Rd_Wr				=>	RDWRINT,
 	En					=>	ENRDWR,
-	
 	CE					=>	CE,
 	OE					=>	OE,
 	WE					=>	WE,
@@ -57,87 +79,84 @@ Gral_FSM: Top_FSM port map(
 	--inputs
 	Clk			=>	CLK,
 	Rst			=>	RESET,
-	botones		=>	BOTONES,
-	ready			=>	READY_GRAL,
+	botones		=>	BTS,
+	ready			=>	READY_MEM,
 	cmd			=>	COMPOUT,	
 	--outputs
-	ADDRESS		=>	
-	RD_WR 		=>
+	ADDRESS		=>	ADDR_FSM,
+	ADDR_SEL		=> ADDR_SEL,
+	SetBotones	=>	BTSET,
+	RD_WR 		=>	RDWRINT,
 	ENRD_WR 		=>	ENRDWR,
-	Ext_ready 	=>
-	LED_FinWR	=>
-	LOADDIR		=>
-	EN_LFSR		=>
-	Comp_Data	=>
-	Led_RD		=>
-	Led_error	=>
-	EN_7Segm		=>
+	Ext_ready 	=>	READY_GRAL,
+	LED_FinWR	=>	LED_WRITE,
+	LOADDIR		=>	SETLFSR,
+	EN_LFSR		=>	ENLFSR,
+	Led_RD		=>	LEDR,
+	Led_error	=>	LED_ERROR,
+	EN_7Segm		=>	EN7SEG
+	);
+
+LEDRD:	FF_D_RISING port map
+	(
+		D		=>	CLK1HZ,
+		Clk	=>	CLK,
+		Set	=>	'0',
+		Reset	=>	LEDR,
+		En		=>	'1',
+		Q		=>	LED_READ
+	);
+
+ADDR_TO_7SEG: DATA_BUFFER GENERIC MAP(addr_width)
+	PORT MAP(
+	DATAIN	=> ADDR,
+	EN			=> EN7SEG,
+	CLK		=> CLK,
+	CLEAR		=> '0',
+	DATAOUT	=> ADDR2SHOW
+	);
+
+DISP0OUT:	DEC_HEX_7SEG PORT MAP(ADDR2SHOW(3 DOWNTO 0), DISP0);
+DISP1OUT:	DEC_HEX_7SEG PORT MAP(ADDR2SHOW(7 DOWNTO 4), DISP1);
+DISP2OUT:	DEC_HEX_7SEG PORT MAP(ADDR2SHOW(11 DOWNTO 8),DISP2);
+
+LFSR: LFSR_12 port map(
+		Clk	=> CLK,
+		Set	=> SETLFSR,
+		En		=> ENLFSR,
+		b		=>	ADDR_LFSR
+	);
+
+Gen1HZ: DF_HZ port map(
+		CLKin			=>	CLK,
+		rst			=>	RESET,	
+		SelFreq		=>	"100",
+		CLKout		=>	CLK1HZ,
+		LEDout		=>	OPEN,
+		display1		=>	OPEN,
+		display0		=>	OPEN
+	);
+RISING_BTS :FOR i IN 0 TO 2 GENERATE
+	BT: FF_D_FALLING port map
+	(
+		D		=>	'0',
+		Clk	=>	BOTONES(i),
+		Set	=>	BTSET,
+		Reset	=>	'0',
+		Q		=>	BTS(i)
+	);
+END GENERATE;
+
+ROM1: ROM	PORT MAP(
+		address	=> ADDR,
+		clock		=> CLK,
+		q			=> DATA_ROM
+	);
+	
+COMP: Comparador port map(
+	Data_ROM			=>	DATA_ROM,
+	Data_SRAM		=>	DATA_BUS,
+	Comparacion		=>	COMPOUT
 );
 
-ADDR_TO_7SEG: DATA_BUFFER GENERIC MAP(data_width)
-									PORT(
-	DATAIN	=> 
-	EN			=> 
-	CLK		=> 
-	CLEAR		=> 
-	DATAOUT	=> 
-	);
-
-
-LED_W: FF_D_RISING port map
-	(
-		D		=> 
-		Clk	=> 
-		Set	=> 
-		Reset	=> 
-		En		=> 
-		Q		=> 
-	);
-end component;
-
-LFSR: LFSR_20 is
-	port
-	(
-		-- Input ports
-		Clk	: in  std_logic;		--Entrada de reloj
-		Set	: in	std_logic;		--Entrada de seteo
-		Reset	: in	std_logic;
-		En		: in	std_logic;
-
-		-- Output ports
-		b	: out std_logic_vector(19 downto 0)
-	);
-end component;
-
-component DF_HZ is
-	generic
-	(
-		freq:	integer	:=	50000000
-		
-	);
-	port(
-		CLKin: 	in	std_logic;									--Reloj de entrada
-		rst:		in	std_logic;									--Reset asincrónico
-		SelFreq:	in	std_logic_vector(2 downto 0);			--Selector de frecuencia ("000" => 0.1Hz, "001" => 0.5Hz, "010" => 2Hz, "011" => 5Hz, "1xx" => 1Hz)
-		
-		CLKout: 		out std_logic;								--Reloj de salida
-		LEDout: 		out std_logic;								--Salida para LED (puede ser utilizada como salida de reloj auxiliar)
-		display1:	out std_logic_vector(6 downto 0);	--Salida 7 segmentos. Indicador de frecuencia de salida. Número más significativo
-		display0:	out std_logic_vector(6 downto 0)		--Salida 7 segmentos. Indicador de frecuencia de salida. Número menos significativo
-	
-	);
-end component;
-
-component FF_D_FALLING is
-	port
-	(
-		-- Input ports
-		D		: in  std_logic;
-		Clk	: in  std_logic;		--Reloj
-		Set	: in	std_logic;		--Seteo asincrónico
-		Reset	: in	std_logic;
-
-		-- Output ports
-		Q	: out std_logic
-	);
-end component;
+END BEH;

@@ -43,14 +43,15 @@ port(
 	ready			: in	std_logic;										-- Handshake
 	cmd			: in	std_logic;										-- Bit que indica si los datos son iguales en la lectura.										-- Bit que indica si se llego al final de la lectura.
 	--outputs
-	ADDRESS		: out std_logic_vector(19 downto 0);
+	ADDRESS		: out std_logic_vector(RAM_addr_width-1 downto 0);
+	SetBotones	: out	std_logic;
+	ADDR_SEL		: out std_logic;										--
 	RD_WR 		: out std_logic;										--
 	ENRD_WR 		: out std_logic;										--
 	Ext_ready 	: out std_logic;										--
 	LED_FinWR	: out std_logic;										-- Led que se prende cuando termina la escritura
 	LOADDIR		: out std_logic;										-- Cargar direccion 1111111 en LFSR (set LFSR)
 	EN_LFSR		: out std_logic;										-- Suma LFSR
-	Comp_Data	: out std_logic;										-- Comparar dato de ambas memorias
 	Led_RD		: out std_logic;										-- Enable del led de 1 HZ al finalizar la lectura
 	Led_error	: out std_logic;										-- Led rojo cuando no coinciden las memorias
 	EN_7Segm		: out std_logic										-- Enable 7 segmentos, mostrar direccion del error
@@ -73,29 +74,24 @@ END COMPONENT;
 component FF_D_RISING is
 	port
 	(
-		-- Input ports
 		D		: in  std_logic;
 		Clk	: in  std_logic;		--Reloj
 		Set	: in	std_logic;		--Seteo asincrónico
 		Reset	: in	std_logic;
 		En		: in	std_logic;
 
-		-- Output ports
 		Q	: out std_logic
 	);
 end component;
 
-component LFSR_20 is
+component LFSR_12 is
 	port
 	(
-		-- Input ports
-		Clk	: in  std_logic;		--Entrada de reloj
-		Set	: in	std_logic;		--Entrada de seteo
-		Reset	: in	std_logic;
+		Clk	: in  std_logic;
+		Set	: in	std_logic;
 		En		: in	std_logic;
-
-		-- Output ports
-		b	: out std_logic_vector(19 downto 0)
+		
+		b		: out std_logic_vector(11 downto 0)
 	);
 end component;
 
@@ -141,4 +137,31 @@ port
 	);
 end component;
 
+component DEC_HEX_7SEG is
+
+	port
+	(
+		in1	: in  std_logic_vector(3 downto 0);
+		out1	: out std_logic_vector(0 to 6)
+	);
+end component;
+
+COMPONENT ROM IS
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+		clock			: IN STD_LOGIC  := '1';
+		q				: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+	);
+END COMPONENT;
+
+component Comparador is
+port
+(
+	Data_ROM			: in std_logic_vector(15 downto 0);
+	Data_SRAM		: in std_logic_vector(15 downto 0);
+	Comparacion		: out std_logic
+);
+end component;
+-------------------------------------------------------------------------------------------------------------------------
 end Lab6_Pack;

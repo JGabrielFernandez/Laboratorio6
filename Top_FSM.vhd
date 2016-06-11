@@ -11,16 +11,17 @@ port(
 	botones		: in	std_logic_vector(2 downto 0);				-- Boton(2): Continuar cuando error; Boton(1): Lectura; Boton(0): Escritura;
 	ready			: in	std_logic;										-- Handshake
 	cmd			: in	std_logic;										-- Bit que indica si los datos son iguales en la lectura.
-	--outputs
-	ADDRESS		: out std_logic_vector(addr_width-1 downto 0);
+	
+	ADDRESS		: out std_logic_vector(RAM_addr_width-1 downto 0);
+	SetBotones	: out	std_logic;
+	ADDR_SEL		: out std_logic;										--
 	RD_WR 		: out std_logic;										--
 	ENRD_WR 		: out std_logic;										--
 	Ext_ready 	: out std_logic;										--
 	LED_FinWR	: out std_logic;										-- Led que se prende cuando termina la escritura
 	LOADDIR		: out std_logic;										-- Cargar direccion 1111111 en LFSR (set LFSR)
 	EN_LFSR		: out std_logic;										-- Suma LFSR
-	Comp_Data	: out std_logic;										-- Comparar dato de ambas memorias
-	Led_RD		: out std_logic;										-- Enable del led de 1 HZ al finalizar la lectura
+	LED_RD		: out std_logic;										-- Enable del led de 1 HZ al finalizar la lectura
 	Led_error	: out std_logic;										-- Led rojo cuando no coinciden las memorias
 	EN_7Segm		: out std_logic										-- Enable 7 segmentos, mostrar direccion del error
 );
@@ -32,11 +33,11 @@ architecture beh of Top_FSM is
  type FSM_states_RDWR is (IDLE, INITWR,ESPERAWR, LOADDATA, PRENDERLED, INITRD, ESPERARD, COMPARE, FINRD, ERROR_DATO, BLINK_LED);
  signal current_state,next_state:FSM_states_RDWR;
 
- signal direccion: std_logic_vector(addr_width-1 downto 0);
+ signal direccion: std_logic_vector(RAM_addr_width-1 downto 0);
 
  begin
  ADDRESS <= direccion;
- PROXIMO_ESTADO: process(current_state,Botones,ready,direccion,cmd,AND_DIR)
+ PROXIMO_ESTADO: process(current_state,Botones,ready,direccion,cmd)
  begin
 	case current_state is
 		when IDLE =>
@@ -56,7 +57,7 @@ architecture beh of Top_FSM is
 		when LOADDATA =>
 				if (ready= '1') then
 					next_state <= LOADDATA;
-				elsif (direccion = (others=>'1')) then   	----- DIRECCION DE LA ULITMA DIRECCION
+				elsif (direccion = (RAM_addr_width-1 downto 0=>'1')) then   	----- DIRECCION DE LA ULITMA DIRECCION
 					next_state <= PRENDERLED;
 				else
 					next_state <= INITWR;
@@ -79,7 +80,7 @@ architecture beh of Top_FSM is
 				next_state <= FINRD;
 			end if;
 		when FINRD =>
-			if (direccion=(others=>'1')) then
+			if (direccion=(RAM_addr_width-1 downto 0=>'1')) then
 				next_state <= BLINK_LED;
 			else
 				next_state <= ESPERARD;
@@ -109,21 +110,23 @@ end process;
 Output: process(Rst,Current_state)
 begin
 	if (Rst='1') then
-		direccion 	<= (others=>'0');
+		ADDR_SEL		<= '0';
+		direccion 	<= (RAM_addr_width-1 downto 0=>'0');
 		RD_WR 		<= '0';
 		ENRD_WR 		<= '0';
 		Ext_ready 	<= '0';
 		LED_FinWR	<= '0';
 		LOADDIR 		<= '0';
 		EN_LFSR		<= '0';
-		Comp_Data	<= '0';
-		Led_RD		<= '0';
+		LED_RD		<= '0';
 		Led_error	<= '0';
 		EN_7Segm		<= '0';
 	elsif (rising_edge(Clk)) then
+		ADDR_SEL		<= '0';
+		SetBotones	<=	'0';
 		case current_state is
 		when IDLE =>
-			direccion	<= (others=>'0');
+			direccion	<= (RAM_addr_width-1 downto 0=>'0');
 			RD_WR 		<= '0';
 			ENRD_WR 		<= '0';
 			Ext_ready 	<= '0';
@@ -133,6 +136,8 @@ begin
 			ENRD_WR 		<= '1';
 			Ext_ready 	<= '0';
 			LED_FinWR 	<= '0';
+			LED_RD	 	<= '0';
+			SetBotones	<=	'1';
 		when ESPERAWR =>
 			RD_WR 		<= '1';
 			ENRD_WR 		<= '1';
@@ -152,26 +157,32 @@ begin
 			RD_WR 		<= '0';
 			ENRD_WR 		<= '1';
 			EN_LFSR 		<= '0';
+			ADDR_SEL		<= '1';
+			LED_FinWR 	<= '0';
+			LED_RD	 	<= '0';
+			SetBotones	<=	'1';
 		when ESPERARD =>
 			RD_WR 		<= '0';
 			ENRD_WR 		<= '1';
 			EN_LFSR		<= '0';
+			ADDR_SEL		<= '1';
 		when COMPARE =>
-			Comp_Data	<= '1';
 			Ext_ready 	<= '0';
+			ADDR_SEL		<= '1';
 		when FINRD =>
-			Comp_Data	<= '0';
 			Ext_ready 	<= '1';
 			EN_LFSR		<= '1';
 			Led_error	<= '0';
 			EN_7Segm		<=	'0';
+			ADDR_SEL		<= '1';
 		when ERROR_DATO =>
-			Comp_Data	<= '0';
 			Led_error	<= '1';
 			EN_7Segm		<=	'1';
+			ADDR_SEL		<= '1';
 		when BLINK_LED =>
 			EN_LFSR		<= '0';
 			LED_RD		<= '1';
+			ADDR_SEL		<= '1';
 		when others =>	null;
 	end case;
 	end if;
