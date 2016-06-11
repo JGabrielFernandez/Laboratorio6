@@ -1,10 +1,10 @@
 library ieee; 
 use ieee.std_logic_1164.all;
 
-entity LFSR_4_TB is
-end LFSR_4_TB;
+entity LFSR_12_TB is
+end LFSR_12_TB;
 
-architecture test of LFSR_4_TB is
+architecture test of LFSR_12_TB is
 
 component LFSR_12 is
 	port
@@ -16,34 +16,38 @@ component LFSR_12 is
 		En		: in	std_logic;
 
 		-- Output ports
-		b	: out std_logic_vector(addr_width-1 downto 0)
+		b	: out std_logic_vector(11 downto 0)
 	);
 end component;
 
-signal Clk, Set	: std_logic;
-signal b				: std_logic_vector(3 downto 0);
+signal Clk, Set, Reset,En	: std_logic;
+signal b				: std_logic_vector(11 downto 0);
 
 begin
 	
-	LFSR1: LFSR_4 port map(
+	LFSR1: LFSR_12 port map(
 									Clk=>Clk,
 									Set=>Set,
+									Reset=>Reset,
+									En=>En,
 									b=>b
 									);
 	
 	aplica_entradas: process
 	begin
 		Set <= '1';
+		En <= '1';
+		Reset<= '0';
 		wait for 50ns;
 		Set <= '0';
-		for i in 0 to 14 loop
+		for i in 0 to 4097 loop
 			Clk<='0';
-			wait for 50ns;
+			wait for 5ns;
 			Clk<='1'; 
-			wait for 50ns;
+			wait for 5ns;
 		end loop;
 		wait for 50ns;
-		wait;
+	assert(false) report "FIN" severity failure;
 	end process;
 
 end test;

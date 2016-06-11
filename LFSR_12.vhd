@@ -1,5 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
+use work.Lab6_Pack.all;
 
 --CONTADOR LINEAR FEEDBACK SHIFT REGISTER.
 --Cuenta una secuencia pseudoaleatoria de 4 bits cíclica de 15 estados.  Posee una entrada de seteo.
@@ -42,8 +43,8 @@ begin
 
 	XOR1<=int(11) XOR int(5) xor int(3) XOR int(0);		
 	
-	LFSR: for i in 19 downto 0 generate
-		i32: if (i<addr_width-1 and i>0) generate
+	LFSR: for i in 11 downto 0 generate
+		i32: if (i<addr_width and i>0) generate
 			bit32: FF_D_RISING port map(D=>int(i-1), Clk=>Clk, Set=>Set,Q=>int(i),reset=>'0',En=>En);	--demas bits de salida
 		end generate i32;
 		i0: if(i=0) generate
