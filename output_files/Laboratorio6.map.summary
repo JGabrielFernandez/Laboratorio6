@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sat Jun 11 10:41:55 2016
+Analysis & Elaboration Status : Successful - Sat Jun 11 13:29:35 2016
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : Laboratorio6
-Top-level Entity Name : LFSR_20
+Top-level Entity Name : LFSR_12
 Family : Cyclone IV E
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

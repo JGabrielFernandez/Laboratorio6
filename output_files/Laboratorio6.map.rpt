@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Laboratorio6
-Sat Jun 11 10:41:55 2016
+Sat Jun 11 13:29:35 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -22,15 +22,7 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
  14. Port Connectivity Checks: "FF_D_RISING:\LFSR:9:i32:bit32"
  15. Port Connectivity Checks: "FF_D_RISING:\LFSR:10:i32:bit32"
  16. Port Connectivity Checks: "FF_D_RISING:\LFSR:11:i32:bit32"
- 17. Port Connectivity Checks: "FF_D_RISING:\LFSR:12:i32:bit32"
- 18. Port Connectivity Checks: "FF_D_RISING:\LFSR:13:i32:bit32"
- 19. Port Connectivity Checks: "FF_D_RISING:\LFSR:14:i32:bit32"
- 20. Port Connectivity Checks: "FF_D_RISING:\LFSR:15:i32:bit32"
- 21. Port Connectivity Checks: "FF_D_RISING:\LFSR:16:i32:bit32"
- 22. Port Connectivity Checks: "FF_D_RISING:\LFSR:17:i32:bit32"
- 23. Port Connectivity Checks: "FF_D_RISING:\LFSR:18:i32:bit32"
- 24. Port Connectivity Checks: "FF_D_RISING:\LFSR:19:i32:bit32"
- 25. Analysis & Elaboration Messages
+ 17. Analysis & Elaboration Messages
 
 
 
@@ -57,10 +49,10 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat Jun 11 10:41:55 2016       ;
+; Analysis & Elaboration Status      ; Successful - Sat Jun 11 13:29:35 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio6                                ;
-; Top-level Entity Name              ; LFSR_20                                     ;
+; Top-level Entity Name              ; LFSR_12                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -80,7 +72,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -91,7 +83,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; LFSR_20            ; Laboratorio6       ;
+; Top-level entity name                                                      ; LFSR_12            ; Laboratorio6       ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -280,111 +272,32 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+-------+----------+---------------------------------+
 
 
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:12:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:13:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:14:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:15:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:16:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:17:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:18:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "FF_D_RISING:\LFSR:19:i32:bit32" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sat Jun 11 10:41:40 2016
+    Info: Processing started: Sat Jun 11 13:29:17 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio6 -c Laboratorio6 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file laboratorio6.vhd
-    Info (12022): Found design unit 1: Laboratorio6-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 30
-    Info (12023): Found entity 1: Laboratorio6 File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file control_ram_fsm.vhd
-    Info (12022): Found design unit 1: Control_RAM_FSM-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM.vhd Line: 23
-    Info (12023): Found entity 1: Control_RAM_FSM File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file control_ram_fsm_tb.vhd
-    Info (12022): Found design unit 1: Control_RAM_FSM_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd Line: 8
-    Info (12023): Found entity 1: Control_RAM_FSM_TB File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd Line: 5
 Info (12021): Found 1 design units, including 0 entities, in source file lab6_package.vhd
-    Info (12022): Found design unit 1: Lab6_Pack File: E:/Mega/Facultad/FPGA/Laboratorio6/Lab6_Package.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ff_d_rising.vhd
-    Info (12022): Found design unit 1: FF_D_RISING-flow File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_RISING.vhd Line: 20
-    Info (12023): Found entity 1: FF_D_RISING File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_RISING.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file lfsr_20.vhd
-    Info (12022): Found design unit 1: LFSR_20-shift File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_20.vhd Line: 21
-    Info (12023): Found entity 1: LFSR_20 File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_20.vhd Line: 7
-Info (12127): Elaborating entity "LFSR_20" for the top level hierarchy
-Info (12128): Elaborating entity "FF_D_RISING" for hierarchy "FF_D_RISING:\LFSR:19:i32:bit32" File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_20.vhd Line: 47
-Warning (10492): VHDL Process Statement warning at FF_D_RISING.vhd(24): signal "En" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_RISING.vhd Line: 24
+    Info (12022): Found design unit 1: Lab6_Pack File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Lab6_Package.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file lfsr_12_tb.vhd
+    Info (12022): Found design unit 1: LFSR_12_TB-test File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 7
+    Info (12023): Found entity 1: LFSR_12_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file lfsr_12.vhd
+    Info (12022): Found design unit 1: LFSR_12-shift File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd Line: 22
+    Info (12023): Found entity 1: LFSR_12 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd Line: 8
+Info (12127): Elaborating entity "LFSR_12" for the top level hierarchy
+Warning (12125): Using design file ff_d_rising.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: FF_D_RISING-flow File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ff_d_rising.vhd Line: 20
+    Info (12023): Found entity 1: FF_D_RISING File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ff_d_rising.vhd Line: 5
+Info (12128): Elaborating entity "FF_D_RISING" for hierarchy "FF_D_RISING:\LFSR:11:i32:bit32" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd Line: 48
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 840 megabytes
-    Info: Processing ended: Sat Jun 11 10:41:55 2016
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 803 megabytes
+    Info: Processing ended: Sat Jun 11 13:29:35 2016
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:41
 
 
