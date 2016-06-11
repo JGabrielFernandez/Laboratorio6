@@ -151,7 +151,7 @@ begin
 			LOADDIR 		<= '1';
 			RD_WR 		<= '0';
 			ENRD_WR 		<= '1';
-			EN_LFSR 		<= '0';								--- DUDA SI PONER EN 1 O NO
+			EN_LFSR 		<= '0';
 		when ESPERARD =>
 			RD_WR 		<= '0';
 			ENRD_WR 		<= '1';

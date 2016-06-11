@@ -132,4 +132,13 @@ component FF_D_FALLING is
 	);
 end component;
 
+component MUX_4_1 is
+port
+	(
+		in0,in1,in2,in3	: in  std_logic;
+		sel	: in	std_logic_vector(1 downto 0);
+		out1	: out	std_logic
+	);
+end component;
+
 end Lab6_Pack;

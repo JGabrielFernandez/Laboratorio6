@@ -69,10 +69,10 @@ set_global_assignment -name VHDL_FILE Comparador.vhd
 set_global_assignment -name VHDL_FILE Control_RAM_FSM.vhd
 set_global_assignment -name VHDL_FILE Control_RAM_FSM_TB.vhd
 set_global_assignment -name VHDL_FILE FF_D_RISING.vhd
-set_global_assignment -name VHDL_FILE LFSR_20.vhd
 set_global_assignment -name VHDL_FILE DF_HZ.vhd
 set_global_assignment -name VHDL_FILE FF_D_FALLING.vhd
 set_global_assignment -name VHDL_FILE Top_FSM.vhd
 set_global_assignment -name VHDL_FILE Laboratorio6.vhd
 set_global_assignment -name VHDL_FILE LFSR_12_TB.vhd
 set_global_assignment -name VHDL_FILE LFSR_12.vhd
+set_global_assignment -name VHDL_FILE MUX_4_1.vhd
