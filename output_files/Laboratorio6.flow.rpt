@@ -1,5 +1,5 @@
 Flow report for Laboratorio6
-Fri Jun 10 12:24:39 2016
+Sat Jun 11 10:38:11 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,10 +41,10 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Jun 10 12:24:39 2016       ;
+; Flow Status                        ; Flow Failed - Sat Jun 11 10:38:11 2016      ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio6                                ;
-; Top-level Entity Name              ; Control_RAM_FSM                             ;
+; Top-level Entity Name              ; LFSR_4                                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
@@ -65,37 +65,37 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/10/2016 12:24:15 ;
+; Start date & time ; 06/11/2016 10:37:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio6        ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                    ;
-+--------------------------------------+---------------------------------------+---------------+-----------------+--------------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name     ; Section Id         ;
-+--------------------------------------+---------------------------------------+---------------+-----------------+--------------------+
-; COMPILER_SIGNATURE_ID                ; 269322049746858.146557225505336       ; --            ; --              ; --                 ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --              ; Control_RAM_FSM_TB ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Control_RAM_FSM_TB                    ; --            ; --              ; eda_simulation     ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --              ; eda_simulation     ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --              ; --                 ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --              ; eda_simulation     ;
-; EDA_TEST_BENCH_FILE                  ; Control_RAM_FSM_TB.vhd                ; --            ; --              ; Control_RAM_FSM_TB ;
-; EDA_TEST_BENCH_MODULE_NAME           ; Control_RAM_FSM_TB                    ; --            ; --              ; Control_RAM_FSM_TB ;
-; EDA_TEST_BENCH_NAME                  ; Control_RAM_FSM_TB                    ; --            ; --              ; eda_simulation     ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --              ; --                 ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --              ; --                 ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --              ; --                 ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; Control_RAM_FSM ; Top                ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; Control_RAM_FSM ; Top                ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; Control_RAM_FSM ; Top                ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --              ; --                 ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --              ; --                 ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --              ; --                 ;
-; TOP_LEVEL_ENTITY                     ; Control_RAM_FSM                       ; Laboratorio6  ; --              ; --                 ;
-+--------------------------------------+---------------------------------------+---------------+-----------------+--------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                ;
++--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id         ;
++--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
+; COMPILER_SIGNATURE_ID                ; 23084203634910.146565227721276        ; --            ; --          ; --                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Control_RAM_FSM_TB ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Control_RAM_FSM_TB                    ; --            ; --          ; eda_simulation     ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation     ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --                 ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_FILE                  ; Control_RAM_FSM_TB.vhd                ; --            ; --          ; Control_RAM_FSM_TB ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Control_RAM_FSM_TB                    ; --            ; --          ; Control_RAM_FSM_TB ;
+; EDA_TEST_BENCH_NAME                  ; Control_RAM_FSM_TB                    ; --            ; --          ; eda_simulation     ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --                 ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --                 ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --                 ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; LFSR_4      ; Top                ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; LFSR_4      ; Top                ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; LFSR_4      ; Top                ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --                 ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --                 ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --                 ;
+; TOP_LEVEL_ENTITY                     ; LFSR_4                                ; Laboratorio6  ; --          ; --                 ;
++--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -103,8 +103,8 @@ agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:25     ; 1.0                     ; 800 MB              ; 00:00:38                           ;
-; Total                  ; 00:00:25     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Elaboration ; 00:00:15     ; 1.0                     ; 844 MB              ; 00:00:37                           ;
+; Total                  ; 00:00:15     ; --                      ; --                  ; 00:00:37                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,7 +113,7 @@ agreement for further details.
 +------------------------+------------------+-----------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +------------------------+------------------+-----------+------------+----------------+
-; Analysis & Elaboration ; Daniela-NB       ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Elaboration ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
 +------------------------+------------------+-----------+------------+----------------+
 
 

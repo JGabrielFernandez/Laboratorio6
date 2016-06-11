@@ -94,7 +94,7 @@ begin
 		CE				<= '1';				
 		OE				<= '1';				
 		WE				<= '1';			
-		Ready			<= '1';
+		Ready			<= '0';
 	elsif (rising_edge(clk)) then
 		case current_state is
 			when IDLE =>
@@ -105,7 +105,7 @@ begin
 				contador		<= "0000";
 			when INIT_RD =>
 				CE				<= '0';
-				OE				<= '1';
+				OE				<= '0';
 				WE				<= '1';
 				Ready			<= '0';
 				contador		<= contador + 1;
