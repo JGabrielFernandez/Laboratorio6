@@ -1,0 +1,9 @@
+
+State Machine - |Control_RAM_FSM|current_state
+Name current_state.WAIT_WR current_state.END_WR current_state.END_RD current_state.INIT_WR current_state.INIT_RD current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 
+current_state.INIT_RD 0 0 0 0 1 1 
+current_state.INIT_WR 0 0 0 1 0 1 
+current_state.END_RD 0 0 1 0 0 1 
+current_state.END_WR 0 1 0 0 0 1 
+current_state.WAIT_WR 1 0 0 0 0 1 

@@ -1,0 +1,68 @@
+# do Laboratorio6_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 12:31:30 on Jun 07,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Control_RAM_FSM
+# -- Compiling architecture beh of Control_RAM_FSM
+# End time: 12:31:30 on Jun 07,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 12:31:30 on Jun 07,2016
+# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Control_RAM_FSM_TB
+# -- Compiling architecture tb of Control_RAM_FSM_TB
+# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd(47): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 12:31:30 on Jun 07,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  Control_RAM_FSM_TB
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" Control_RAM_FSM_TB 
+# Start time: 12:31:31 on Jun 07,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.control_ram_fsm_tb(tb)
+# Loading ieee.numeric_std(body)
+# Loading work.control_ram_fsm(beh)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Failure: FIN
+#    Time: 530 ns  Iteration: 0  Process: /control_ram_fsm_tb/Aplica_entradas File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd
+# Break in Process Aplica_entradas at C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd line 48
+add wave -position end  sim:/control_ram_fsm_tb/Control/contador
+add wave -position end  sim:/control_ram_fsm_tb/Control/current_state
+restart -f
+run -all
+# ** Failure: FIN
+#    Time: 530 ns  Iteration: 0  Process: /control_ram_fsm_tb/Aplica_entradas File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd
+# Break in Process Aplica_entradas at C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd line 48
+# End time: 12:32:40 on Jun 07,2016, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 0

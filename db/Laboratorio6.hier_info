@@ -1,0 +1,36 @@
+|Control_RAM_FSM
+Clk => contador[0].CLK
+Clk => contador[1].CLK
+Clk => contador[2].CLK
+Clk => contador[3].CLK
+Clk => Ready~reg0.CLK
+Clk => WE~reg0.CLK
+Clk => OE~reg0.CLK
+Clk => CE~reg0.CLK
+Clk => current_state~1.DATAIN
+Ext_ready => Selector0.IN4
+Ext_ready => Selector4.IN3
+Ext_ready => Selector3.IN1
+Ext_ready => Selector5.IN2
+Reset => Ready~reg0.PRESET
+Reset => WE~reg0.PRESET
+Reset => OE~reg0.PRESET
+Reset => CE~reg0.PRESET
+Reset => current_state~3.DATAIN
+Reset => contador[0].ENA
+Reset => contador[3].ENA
+Reset => contador[2].ENA
+Reset => contador[1].ENA
+Rd_Wr => next_state.DATAA
+Rd_Wr => next_state.DATAA
+En => next_state.OUTPUTSELECT
+En => next_state.OUTPUTSELECT
+En => Selector0.IN1
+CE <= CE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OE <= OE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+WE <= WE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+UB <= <GND>
+LB <= <GND>
+Ready <= Ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
