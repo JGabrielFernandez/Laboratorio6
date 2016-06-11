@@ -1,180 +1,143 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use work.Lab6_Pack.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+USE work.Lab6_Pack.all;
 
-entity Laboratorio6 is
-port(
+ENTITY Laboratorio6 IS
+	PORT(
+		RESET		:	IN	STD_LOGIC;
+		CLK		:	IN	STD_LOGIC;
+		BOTONES	: 	IN	STD_LOGIC_VECTOR(2 DOWNTO 0);				-- Boton(2): Continuar cuando error; Boton(1): Lectura; Boton(0): Escritura;
+		
+		LED_WRITE:	OUT	STD_LOGIC;
+		LED_READ	:	OUT	STD_LOGIC;
+		LED_ERROR:	OUT	STD_LOGIC;
+		
+		WE			:	OUT	STD_LOGIC;
+		RDWR		:	OUT	STD_LOGIC;
+		CE			:	OUT	STD_LOGIC;
+		OE			:	OUT	STD_LOGIC;
+		LB			:	OUT	STD_LOGIC;
+		UB			:	OUT	STD_LOGIC;
+		DATA_BUS	:	INOUT	STD_LOGIC_VECTOR(data_width-1 DOWNTO 0);
+		ADDRESS	:	OUT	STD_LOGIC_VECTOR(addr_width-1 DOWNTO 0);
+		
+		DISP0		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
+		DISP1		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
+		DISP2		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
+		DISP3		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
+		DISP4		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0)
+END ENTITY;
+
+ARCHITECTURE BEH OF Laboratorio6 IS
+
+SIGNAL READY_MEM, READY_GRAL:	STD_LOGIC;
+SIGNAL RDWRINT,ENRDWR:	STD_LOGIC;
+SIGNAL COMPOUT;
+
+
+BEGIN
+RDWR<=RDWRINT;
+RAM_FSM: Control_RAM_FSM port map(
+	Clk				=>	CLK,
+	Ext_ready		=>	READY_GRAL,
+	Reset				=>	RESET,
+	Rd_Wr				=>	RDWRINT,
+	En					=>	ENRDWR,
+	
+	CE					=>	CE,
+	OE					=>	OE,
+	WE					=>	WE,
+	UB					=>	UB,
+	LB					=>	LB,
+	Ready				=>	READY_MEM
+	);
+
+Gral_FSM: Top_FSM port map(
 	--inputs
-	Clk			: in	std_logic;
-	Rst			: in	std_logic;
-	botones		: in	std_logic_vector(2 downto 0);				-- Boton(2): Continuar cuando error; Boton(1): Lectura; Boton(0): Escritura;
-	ready			: in	std_logic;										-- Handshake
-	cmd			: in	std_logic;										-- Bit que indica si los datos son iguales en la lectura.
-	AND_DIR		: in	std_logic;										-- Bit que indica si se llego al final de la lectura.
+	Clk			=>	CLK,
+	Rst			=>	RESET,
+	botones		=>	BOTONES,
+	ready			=>	READY_GRAL,
+	cmd			=>	COMPOUT,	
 	--outputs
-	ADDRESS		: out std_logic_vector(19 downto 0);
-	RD_WR 		: out std_logic;										--
-	ENRD_WR 		: out std_logic;										--
-	Ext_ready 	: out std_logic;										--
-	LED_FinWR	: out std_logic;										-- Led que se prende cuando termina la escritura
-	LOADDIR		: out std_logic;										-- Cargar direccion 1111111 en LFSR (set LFSR)
-	EN_LFSR		: out std_logic;										-- Suma LFSR
-	Comp_Data	: out std_logic;										-- Comparar dato de ambas memorias
-	Led_RD		: out std_logic;										-- Enable del led de 1 HZ al finalizar la lectura
-	Led_error	: out std_logic;										-- Led rojo cuando no coinciden las memorias
-	EN_7Segm		: out std_logic										-- Enable 7 segmentos, mostrar direccion del error
+	ADDRESS		=>	
+	RD_WR 		=>
+	ENRD_WR 		=>	ENRDWR,
+	Ext_ready 	=>
+	LED_FinWR	=>
+	LOADDIR		=>
+	EN_LFSR		=>
+	Comp_Data	=>
+	Led_RD		=>
+	Led_error	=>
+	EN_7Segm		=>
 );
-end Laboratorio6;
 
-architecture beh of Laboratorio6 is
+ADDR_TO_7SEG: DATA_BUFFER GENERIC MAP(data_width)
+									PORT(
+	DATAIN	=> 
+	EN			=> 
+	CLK		=> 
+	CLEAR		=> 
+	DATAOUT	=> 
+	);
 
- -- señales
- type FSM_states_RDWR is (IDLE, INITWR,ESPERAWR, LOADDATA, PRENDERLED, INITRD, ESPERARD, COMPARE, FINRD, ERROR_DATO, BLINK_LED);
- signal current_state,next_state:FSM_states_RDWR;
 
- signal direccion: std_logic_vector(19 downto 0);
+LED_W: FF_D_RISING port map
+	(
+		D		=> 
+		Clk	=> 
+		Set	=> 
+		Reset	=> 
+		En		=> 
+		Q		=> 
+	);
+end component;
 
- begin
- ADDRESS <= direccion;
- PROXIMO_ESTADO: process(current_state,Botones,ready,direccion,cmd,AND_DIR)
- begin
-	case current_state is
-		when IDLE =>
-			if (botones = "110") then
-				next_state <= INITWR;			-- hacer que sea por flanco!!!
-			elsif (botones = "101") then
-				next_state <= INITRD;				-- proximo estado, escritura
-			end if;
-		when INITWR =>
-			next_state <= ESPERAWR;
-		when ESPERAWR =>
-			if (ready = '1') then
-				next_state <= LOADDATA;
-			elsif (ready = '0') then
-				next_state <= ESPERAWR;
-			end if;
-		when LOADDATA =>
-				if (ready= '1') then
-					next_state <= LOADDATA;
-				elsif (direccion = "11111111111111111111") then   	----- DIRECCION DE LA ULITMA DIRECCION
-					next_state <= PRENDERLED;
-				else
-					next_state <= INITWR;
-				end if;
-		when PRENDERLED => 
-			next_state <= IDLE;
------------------------------------------------------------------------------------abajo lectura, arriba escritura			
-		when INITRD =>
-			next_state <= ESPERARD;
-		when ESPERARD =>
-			if (ready='1') then
-				next_state <= COMPARE;
-			else
-				next_state <= ESPERARD;
-			end if;
-		when COMPARE =>
-			if (cmd='0') then
-				next_state <= ERROR_DATO;
-			else
-				next_state <= FINRD;
-			end if;
-		when FINRD =>
-			if (AND_DIR='1') then
-				next_state <= BLINK_LED;
-			else
-				next_state <= ESPERARD;
-			end if;
-		when ERROR_DATO =>
-			if (Botones = "011") then
-				next_state <= FINRD;
-			else 
-				next_state <= ERROR_DATO;
-			end if;
-		when BLINK_LED =>				
-				next_state <= IDLE;
-		when others =>
-				next_state <= IDLE;
-	end case;
-end process;
+LFSR: LFSR_20 is
+	port
+	(
+		-- Input ports
+		Clk	: in  std_logic;		--Entrada de reloj
+		Set	: in	std_logic;		--Entrada de seteo
+		Reset	: in	std_logic;
+		En		: in	std_logic;
 
-ESTADO_ACTUAL: process(clk,rst)
-begin
-	if(Rst='1') then
-		current_state<=IDLE;
-	elsif(rising_edge(Clk)) then
-		current_state<=next_state;
-	end if;
-end process;
+		-- Output ports
+		b	: out std_logic_vector(19 downto 0)
+	);
+end component;
 
-Output: process(Rst,Current_state)
-begin
-	if (Rst='1') then
-		direccion 	<= "00000000000000000000";
-		RD_WR 		<= '0';
-		ENRD_WR 		<= '0';
-		Ext_ready 	<= '0';
-		LED_FinWR	<= '0';
-		LOADDIR 		<= '0';
-		EN_LFSR		<= '0';
-		Comp_Data	<= '0';
-		Led_RD		<= '0';
-		Led_error	<= '0';
-		EN_7Segm		<= '0';
-	elsif (rising_edge(Clk)) then
-		case current_state is
-		when IDLE =>
-			direccion	<= "00000000000000000000";
-			RD_WR 		<= '0';
-			ENRD_WR 		<= '0';
-			Ext_ready 	<= '0';
-		when INITWR =>
-			direccion 	<= std_logic_vector(unsigned(direccion)+1);
-			RD_WR 		<= '1';
-			ENRD_WR 		<= '1';
-			Ext_ready 	<= '0';
-			LED_FinWR 	<= '0';
-		when ESPERAWR =>
-			RD_WR 		<= '1';
-			ENRD_WR 		<= '1';
-			Ext_ready 	<= '0';
-		when LOADDATA =>
-			RD_WR 		<= '1';
-			ENRD_WR 		<= '1';
-			Ext_ready 	<= '1';
-		when PRENDERLED =>
-			RD_WR 		<= '1';
-			ENRD_WR 		<= '0';
-			Ext_ready 	<= '0';
-			LED_FinWR 	<= '1';
------------------------------------------------------------------------abajo lectura, arriba escritura			
-		when INITRD =>
-			LOADDIR 		<= '1';
-			RD_WR 		<= '0';
-			ENRD_WR 		<= '1';
-			EN_LFSR 		<= '1';								--- DUDA SI PONER EN 1 O NO
-		when ESPERARD =>
-			RD_WR 		<= '0';
-			ENRD_WR 		<= '1';
-			EN_LFSR		<= '0';
-		when COMPARE =>
-			Comp_Data	<= '1';
-			Ext_ready 	<= '0';
-		when FINRD =>
-			Comp_Data	<= '0';
-			Ext_ready 	<= '1';
-			EN_LFSR		<= '1';
-			Led_error	<= '0';
-			EN_7Segm		<=	'0';
-		when ERROR_DATO =>
-			Comp_Data	<= '0';
-			Led_error	<= '1';
-			EN_7Segm		<=	'1';
-		when BLINK_LED =>
-			EN_LFSR		<= '0';
-			LED_RD		<= '1';
-		when others =>	null;
-	end case;
-	end if;
- end process;
- end beh;
+component DF_HZ is
+	generic
+	(
+		freq:	integer	:=	50000000
+		
+	);
+	port(
+		CLKin: 	in	std_logic;									--Reloj de entrada
+		rst:		in	std_logic;									--Reset asincrónico
+		SelFreq:	in	std_logic_vector(2 downto 0);			--Selector de frecuencia ("000" => 0.1Hz, "001" => 0.5Hz, "010" => 2Hz, "011" => 5Hz, "1xx" => 1Hz)
+		
+		CLKout: 		out std_logic;								--Reloj de salida
+		LEDout: 		out std_logic;								--Salida para LED (puede ser utilizada como salida de reloj auxiliar)
+		display1:	out std_logic_vector(6 downto 0);	--Salida 7 segmentos. Indicador de frecuencia de salida. Número más significativo
+		display0:	out std_logic_vector(6 downto 0)		--Salida 7 segmentos. Indicador de frecuencia de salida. Número menos significativo
+	
+	);
+end component;
+
+component FF_D_FALLING is
+	port
+	(
+		-- Input ports
+		D		: in  std_logic;
+		Clk	: in  std_logic;		--Reloj
+		Set	: in	std_logic;		--Seteo asincrónico
+		Reset	: in	std_logic;
+
+		-- Output ports
+		Q	: out std_logic
+	);
+end component;

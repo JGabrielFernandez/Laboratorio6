@@ -6,15 +6,17 @@ end LFSR_4_TB;
 
 architecture test of LFSR_4_TB is
 
-component LFSR_4 is
+component LFSR_12 is
 	port
 	(
 		-- Input ports
-		Clk	: in  std_logic;
-		Set	: in	std_logic;
+		Clk	: in  std_logic;		--Entrada de reloj
+		Set	: in	std_logic;		--Entrada de seteo
+		Reset	: in	std_logic;
+		En		: in	std_logic;
 
 		-- Output ports
-		b	: out std_logic_vector(3 downto 0)
+		b	: out std_logic_vector(addr_width-1 downto 0)
 	);
 end component;
 
