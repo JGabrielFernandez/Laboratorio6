@@ -44,11 +44,14 @@ SIGNAL ADDR2SHOW					:	STD_LOGIC_VECTOR(addr_width-1 DOWNTO 0);
 SIGNAL EN7SEG						:	STD_LOGIC;
 SIGNAL DATA_ROM					:	STD_LOGIC_VECTOR(data_width-1 DOWNTO 0);
 
+signal sel_aux						:	std_logic_vector(1 downto 0);
+
 BEGIN
 ADDRESS(RAM_addr_width-1 downto addr_width)<= (others=>'0');
 ADDRESS(addr_width-1 downto 0)<= ADDR;
 RDWR<=RDWRINT;
 DATA_BUS <= DATA_ROM WHEN (RDwRINT='1') ELSE (OTHERS=>'Z') ;
+sel_aux <= ('0',ADDR_SEL);
 
 REG_ADDR: for i in addr_width-1 downto 0 generate
 	MUX_ADDR: MUX_4_1 port map(
@@ -56,7 +59,8 @@ REG_ADDR: for i in addr_width-1 downto 0 generate
 		in1	=>	ADDR_LFSR(i),
 		in2	=>	'0',
 		in3	=>	'0',
-		sel	=>	('0',ADDR_SEL),
+		sel	=>	sel_aux,
+--		sel	=>	('0',ADDR_SEL),
 		out1	=>	ADDR(i)
 	);
 end generate;

@@ -1,5 +1,19 @@
 
-State Machine - |Control_RAM_FSM|current_state
+State Machine - |Laboratorio6|Top_FSM:Gral_FSM|current_state
+Name current_state.BLINK_LED current_state.ERROR_DATO current_state.FINRD current_state.COMPARE current_state.ESPERARD current_state.INITRD current_state.PRENDERLED current_state.LOADDATA current_state.ESPERAWR current_state.INITWR current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+current_state.INITWR 0 0 0 0 0 0 0 0 0 1 1 
+current_state.ESPERAWR 0 0 0 0 0 0 0 0 1 0 1 
+current_state.LOADDATA 0 0 0 0 0 0 0 1 0 0 1 
+current_state.PRENDERLED 0 0 0 0 0 0 1 0 0 0 1 
+current_state.INITRD 0 0 0 0 0 1 0 0 0 0 1 
+current_state.ESPERARD 0 0 0 0 1 0 0 0 0 0 1 
+current_state.COMPARE 0 0 0 1 0 0 0 0 0 0 1 
+current_state.FINRD 0 0 1 0 0 0 0 0 0 0 1 
+current_state.ERROR_DATO 0 1 0 0 0 0 0 0 0 0 1 
+current_state.BLINK_LED 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Laboratorio6|Control_RAM_FSM:RAM_FSM|current_state
 Name current_state.WAIT_WR current_state.END_WR current_state.END_RD current_state.INIT_WR current_state.INIT_RD current_state.IDLE 
 current_state.IDLE 0 0 0 0 0 0 
 current_state.INIT_RD 0 0 0 0 1 1 

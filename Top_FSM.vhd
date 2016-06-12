@@ -42,9 +42,9 @@ architecture beh of Top_FSM is
 	case current_state is
 		when IDLE =>
 			if (botones = "110") then
-				next_state <= INITWR;			-- hacer que sea por flanco!!!
+				next_state <= INITWR;			
 			elsif (botones = "101") then
-				next_state <= INITRD;				-- proximo estado, escritura
+				next_state <= INITRD;				
 			end if;
 		when INITWR =>
 			next_state <= ESPERAWR;
@@ -121,6 +121,7 @@ begin
 		LED_RD		<= '0';
 		Led_error	<= '0';
 		EN_7Segm		<= '0';
+		SetBotones	<=	'1';
 	elsif (rising_edge(Clk)) then
 		ADDR_SEL		<= '0';
 		SetBotones	<=	'0';
@@ -130,6 +131,7 @@ begin
 			RD_WR 		<= '0';
 			ENRD_WR 		<= '0';
 			Ext_ready 	<= '0';
+			SetBotones	<=	'0';
 		when INITWR =>
 			direccion 	<= std_logic_vector(unsigned(direccion)+1);
 			RD_WR 		<= '1';

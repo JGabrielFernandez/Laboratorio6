@@ -4,6 +4,26 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "LED_WRITE",
+					"strict" : false
+				},
+				{
+					"name" : "LED_READ",
+					"strict" : false
+				},
+				{
+					"name" : "LED_ERROR",
+					"strict" : false
+				},
+				{
+					"name" : "WE",
+					"strict" : false
+				},
+				{
+					"name" : "RDWR",
+					"strict" : false
+				},
+				{
 					"name" : "CE",
 					"strict" : false
 				},
@@ -12,31 +32,219 @@
 					"strict" : false
 				},
 				{
-					"name" : "WE",
+					"name" : "ADDRESS[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Ready",
+					"name" : "ADDRESS[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Clk",
+					"name" : "ADDRESS[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "ADDRESS[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Ext_ready",
+					"name" : "ADDRESS[4]",
 					"strict" : false
 				},
 				{
-					"name" : "En",
+					"name" : "ADDRESS[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Rd_Wr",
+					"name" : "ADDRESS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS[15]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "BOTONES[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BOTONES[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BOTONES[2]",
 					"strict" : false
 				}
 			]

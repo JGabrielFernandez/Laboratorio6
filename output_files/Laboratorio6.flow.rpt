@@ -1,5 +1,5 @@
 Flow report for Laboratorio6
-Sat Jun 11 20:00:04 2016
+Sun Jun 12 19:59:28 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Jun 11 20:00:04 2016       ;
+; Flow Status                        ; Successful - Sun Jun 12 19:59:28 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio6                                ;
 ; Top-level Entity Name              ; Laboratorio6                                ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/11/2016 19:59:47 ;
+; Start date & time ; 06/12/2016 19:59:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio6        ;
 +-------------------+---------------------+
@@ -76,19 +76,23 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id         ;
 +--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
-; COMPILER_SIGNATURE_ID                ; 23084203634910.146568598732808        ; --            ; --          ; --                 ;
+; COMPILER_SIGNATURE_ID                ; 269322049746858.146577235106640       ; --            ; --          ; --                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; LFSR_12_TB         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Laboratorio6_TB    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Control_RAM_FSM_TB ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; LFSR_12_TB                            ; --            ; --          ; eda_simulation     ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Laboratorio6_TB                       ; --            ; --          ; eda_simulation     ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation     ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --                 ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation     ;
 ; EDA_TEST_BENCH_FILE                  ; LFSR_12_TB.vhd                        ; --            ; --          ; LFSR_12_TB         ;
+; EDA_TEST_BENCH_FILE                  ; Laboratorio6_TB.vhd                   ; --            ; --          ; Laboratorio6_TB    ;
 ; EDA_TEST_BENCH_FILE                  ; Control_RAM_FSM_TB.vhd                ; --            ; --          ; Control_RAM_FSM_TB ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; LFSR_12_TB                            ; --            ; --          ; LFSR_12_TB         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Laboratorio6_TB                       ; --            ; --          ; Laboratorio6_TB    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Control_RAM_FSM_TB                    ; --            ; --          ; Control_RAM_FSM_TB ;
 ; EDA_TEST_BENCH_NAME                  ; Control_RAM_FSM_TB                    ; --            ; --          ; eda_simulation     ;
 ; EDA_TEST_BENCH_NAME                  ; LFSR_12_TB                            ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_NAME                  ; Laboratorio6_TB                       ; --            ; --          ; eda_simulation     ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --                 ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --                 ;
 ; MISC_FILE                            ; ROM_inst.vhd                          ; --            ; --          ; --                 ;
@@ -108,8 +112,8 @@ agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 857 MB              ; 00:00:43                           ;
-; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:43                           ;
+; Analysis & Elaboration ; 00:00:17     ; 1.0                     ; 819 MB              ; 00:00:40                           ;
+; Total                  ; 00:00:17     ; --                      ; --                  ; 00:00:40                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,7 +122,7 @@ agreement for further details.
 +------------------------+------------------+-----------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +------------------------+------------------+-----------+------------+----------------+
-; Analysis & Elaboration ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
+; Analysis & Elaboration ; Daniela-NB       ; Windows 7 ; 6.1        ; x86_64         ;
 +------------------------+------------------+-----------+------------+----------------+
 
 
