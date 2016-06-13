@@ -30,7 +30,7 @@ END ENTITY;
 
 ARCHITECTURE BEH OF Laboratorio6 IS
 
-SIGNAL CLK1HZ						:	STD_LOGIC;
+SIGNAL CLK1HZ,CLK1GHZ			:	STD_LOGIC;
 SIGNAL ADDR,ADDR_LFSR			:	STD_LOGIC_VECTOR(addr_width-1 DOWNTO 0);
 SIGNAL ADDR_FSM					:	STD_LOGIC_VECTOR(RAM_addr_width-1 DOWNTO 0);
 SIGNAL BTS							: 	STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -53,6 +53,13 @@ RDWR<=RDWRINT;
 DATA_BUS <= DATA_ROM WHEN (RDwRINT='1') ELSE (OTHERS=>'Z') ;
 sel_aux <= ('0',ADDR_SEL);
 
+PLL1:	PLL PORT MAP(
+		areset		=> RESET,
+		inclk0		=> CLK,
+		c0				=> CLK1GHZ,
+		locked		=> OPEN
+	);
+
 REG_ADDR: for i in addr_width-1 downto 0 generate
 	MUX_ADDR: MUX_4_1 port map(
 		in0	=>	ADDR_FSM(i),
@@ -60,13 +67,12 @@ REG_ADDR: for i in addr_width-1 downto 0 generate
 		in2	=>	'0',
 		in3	=>	'0',
 		sel	=>	sel_aux,
---		sel	=>	('0',ADDR_SEL),
 		out1	=>	ADDR(i)
 	);
 end generate;
 
 RAM_FSM: Control_RAM_FSM port map(
-	Clk				=>	CLK,
+	Clk				=>	CLK1GHZ,
 	Ext_ready		=>	READY_GRAL,
 	Reset				=>	RESET,
 	Rd_Wr				=>	RDWRINT,
@@ -81,7 +87,7 @@ RAM_FSM: Control_RAM_FSM port map(
 
 Gral_FSM: Top_FSM port map(
 	--inputs
-	Clk			=>	CLK,
+	Clk			=>	CLK1GHZ,
 	Rst			=>	RESET,
 	botones		=>	BTS,
 	ready			=>	READY_MEM,
@@ -115,7 +121,7 @@ ADDR_TO_7SEG: DATA_BUFFER GENERIC MAP(addr_width)
 	PORT MAP(
 	DATAIN	=> ADDR,
 	EN			=> EN7SEG,
-	CLK		=> CLK,
+	CLK		=> CLK1GHZ,
 	CLEAR		=> '0',
 	DATAOUT	=> ADDR2SHOW
 	);
@@ -125,7 +131,7 @@ DISP1OUT:	DEC_HEX_7SEG PORT MAP(ADDR2SHOW(7 DOWNTO 4), DISP1);
 DISP2OUT:	DEC_HEX_7SEG PORT MAP(ADDR2SHOW(11 DOWNTO 8),DISP2);
 
 LFSR: LFSR_12 port map(
-		Clk	=> CLK,
+		Clk	=> CLK1GHZ,
 		Set	=> SETLFSR,
 		En		=> ENLFSR,
 		b		=>	ADDR_LFSR
@@ -153,7 +159,7 @@ END GENERATE;
 
 ROM1: ROM	PORT MAP(
 		address	=> ADDR,
-		clock		=> CLK,
+		clock		=> CLK1GHZ,
 		q			=> DATA_ROM
 	);
 	

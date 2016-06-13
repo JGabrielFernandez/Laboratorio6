@@ -11,124 +11,124 @@
 # ** Warning: Copied C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ROM.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:45 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ROM.vhd 
+# Start time: 18:06:00 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package altera_mf_components
 # -- Compiling entity ROM
 # -- Compiling architecture SYN of rom
-# End time: 19:59:45 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:00 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/FF_D_RISING.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_RISING.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:45 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/FF_D_RISING.vhd 
+# Start time: 18:06:00 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_RISING.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FF_D_RISING
 # -- Compiling architecture flow of FF_D_RISING
-# End time: 19:59:45 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:00 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/FF_D_FALLING.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_FALLING.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:46 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/FF_D_FALLING.vhd 
+# Start time: 18:06:00 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_FALLING.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FF_D_FALLING
 # -- Compiling architecture flow of FF_D_FALLING
-# End time: 19:59:46 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:00 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DF_HZ.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/DF_HZ.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:46 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DF_HZ.vhd 
+# Start time: 18:06:00 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/DF_HZ.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity DF_HZ
 # -- Compiling architecture beh of DF_HZ
-# End time: 19:59:46 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:00 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:46 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM.vhd 
+# Start time: 18:06:00 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Control_RAM_FSM
 # -- Compiling architecture beh of Control_RAM_FSM
-# End time: 19:59:46 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:00 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Comparador.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/Comparador.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:46 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Comparador.vhd 
+# Start time: 18:06:00 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/Comparador.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Comparador
 # -- Compiling architecture beh of Comparador
-# End time: 19:59:46 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:00 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Lab6_Package.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/Lab6_Package.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:46 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Lab6_Package.vhd 
+# Start time: 18:06:00 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/Lab6_Package.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling package Lab6_Pack
-# End time: 19:59:46 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:00 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/MUX_4_1.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/MUX_4_1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:46 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/MUX_4_1.vhd 
+# Start time: 18:06:00 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/MUX_4_1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MUX_4_1
 # -- Compiling architecture flujo of MUX_4_1
-# End time: 19:59:46 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:01 on Jun 13,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DATA_BUFFER.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/DATA_BUFFER.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:46 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DATA_BUFFER.vhd 
+# Start time: 18:06:01 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/DATA_BUFFER.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity DATA_BUFFER
 # -- Compiling architecture BEH of DATA_BUFFER
-# End time: 19:59:46 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:01 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:47 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd 
+# Start time: 18:06:01 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity DEC_HEX_7SEG
 # -- Compiling architecture DECOD of DEC_HEX_7SEG
-# End time: 19:59:47 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:01 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:47 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd 
+# Start time: 18:06:01 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -136,12 +136,12 @@
 # -- Loading package Lab6_Pack
 # -- Compiling entity Top_FSM
 # -- Compiling architecture beh of Top_FSM
-# End time: 19:59:47 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:01 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:47 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd 
+# Start time: 18:06:01 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -149,12 +149,12 @@
 # -- Loading package Lab6_Pack
 # -- Compiling entity Laboratorio6
 # -- Compiling architecture BEH of Laboratorio6
-# End time: 19:59:47 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:01 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:47 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd 
+# Start time: 18:06:01 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -162,26 +162,26 @@
 # -- Loading package Lab6_Pack
 # -- Compiling entity LFSR_12
 # -- Compiling architecture shift of LFSR_12
-# End time: 19:59:47 on Jun 12,2016, Elapsed time: 0:00:00
+# End time: 18:06:01 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6_TB.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6_TB.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:59:47 on Jun 12,2016
-# vcom -reportprogress 300 -93 -work work C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6_TB.vhd 
+# Start time: 18:06:01 on Jun 13,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6_TB.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Laboratorio6_TB
 # -- Compiling architecture tb of Laboratorio6_TB
-# ** Warning: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6_TB.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 19:59:47 on Jun 12,2016, Elapsed time: 0:00:00
+# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6_TB.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 18:06:01 on Jun 13,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  Laboratorio6_TB
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" Laboratorio6_TB 
-# Start time: 19:59:47 on Jun 12,2016
+# Start time: 18:06:01 on Jun 13,2016
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -227,29 +227,8 @@
 #    Time: 10 ns  Iteration: 1  Instance: /laboratorio6_tb/LAB6/ROM1/altsyncram_component
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 10 ns  Iteration: 1  Instance: /laboratorio6_tb/LAB6/ROM1/altsyncram_component
-# Break key hit
-# Simulation stop requested.
-restart -f
-add wave -position 2  sim:/laboratorio6_tb/LAB6/BTS
-add wave -position 3  sim:/laboratorio6_tb/LAB6/BTSET
-add wave -position 3  sim:/laboratorio6_tb/LAB6/Gral_FSM/SetBotones
-restart -f
-run -all
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 10 ns  Iteration: 0  Instance: /laboratorio6_tb/LAB6/Gen1HZ
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /laboratorio6_tb/LAB6/ROM1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 1  Instance: /laboratorio6_tb/LAB6/ROM1/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /laboratorio6_tb/LAB6/ROM1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 1  Instance: /laboratorio6_tb/LAB6/ROM1/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /laboratorio6_tb/LAB6/ROM1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 1  Instance: /laboratorio6_tb/LAB6/ROM1/altsyncram_component
-# Break key hit
-# Simulation stop requested.
-# End time: 20:08:12 on Jun 12,2016, Elapsed time: 0:08:25
-# Errors: 0, Warnings: 14
+# ** Failure: FIN
+#    Time: 1310570 ns  Iteration: 2  Process: /laboratorio6_tb/Escritura_Datos File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6_TB.vhd
+# Break in Process Escritura_Datos at E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6_TB.vhd line 61
+# End time: 18:08:17 on Jun 13,2016, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 7

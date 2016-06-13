@@ -44,20 +44,22 @@ architecture beh of Top_FSM is
 			if (botones = "110") then
 				next_state <= INITWR;			
 			elsif (botones = "101") then
-				next_state <= INITRD;				
+				next_state <= INITRD;
+			else
+				next_state <= IDLE;
 			end if;
 		when INITWR =>
 			next_state <= ESPERAWR;
 		when ESPERAWR =>
 			if (ready = '1') then
 				next_state <= LOADDATA;
-			elsif (ready = '0') then
+			else
 				next_state <= ESPERAWR;
 			end if;
 		when LOADDATA =>
 				if (ready= '1') then
 					next_state <= LOADDATA;
-				elsif (direccion = (RAM_addr_width-1 downto 0=>'1')) then   	----- DIRECCION DE LA ULITMA DIRECCION
+				elsif (direccion(addr_width-1 downto 0)=(addr_width-1 downto 0=>'1')) then   	----- DIRECCION DE LA ULITMA DIRECCION
 					next_state <= PRENDERLED;
 				else
 					next_state <= INITWR;
@@ -80,7 +82,7 @@ architecture beh of Top_FSM is
 				next_state <= FINRD;
 			end if;
 		when FINRD =>
-			if (direccion=(RAM_addr_width-1 downto 0=>'1')) then
+			if (direccion(addr_width-1 downto 0)=(addr_width-1 downto 0=>'1')) then
 				next_state <= BLINK_LED;
 			else
 				next_state <= ESPERARD;
@@ -107,7 +109,7 @@ begin
 	end if;
 end process;
 
-Output: process(Rst,Current_state)
+Output: process(Rst,current_state,clk)
 begin
 	if (Rst='1') then
 		ADDR_SEL		<= '0';
@@ -126,67 +128,67 @@ begin
 		ADDR_SEL		<= '0';
 		SetBotones	<=	'0';
 		case current_state is
-		when IDLE =>
-			direccion	<= (RAM_addr_width-1 downto 0=>'0');
-			RD_WR 		<= '0';
-			ENRD_WR 		<= '0';
-			Ext_ready 	<= '0';
-			SetBotones	<=	'0';
-		when INITWR =>
-			direccion 	<= std_logic_vector(unsigned(direccion)+1);
-			RD_WR 		<= '1';
-			ENRD_WR 		<= '1';
-			Ext_ready 	<= '0';
-			LED_FinWR 	<= '0';
-			LED_RD	 	<= '0';
-			SetBotones	<=	'1';
-		when ESPERAWR =>
-			RD_WR 		<= '1';
-			ENRD_WR 		<= '1';
-			Ext_ready 	<= '0';
-		when LOADDATA =>
-			RD_WR 		<= '1';
-			ENRD_WR 		<= '1';
-			Ext_ready 	<= '1';
-		when PRENDERLED =>
-			RD_WR 		<= '1';
-			ENRD_WR 		<= '0';
-			Ext_ready 	<= '0';
-			LED_FinWR 	<= '1';
------------------------------------------------------------------------abajo lectura, arriba escritura			
-		when INITRD =>
-			LOADDIR 		<= '1';
-			RD_WR 		<= '0';
-			ENRD_WR 		<= '1';
-			EN_LFSR 		<= '0';
-			ADDR_SEL		<= '1';
-			LED_FinWR 	<= '0';
-			LED_RD	 	<= '0';
-			SetBotones	<=	'1';
-		when ESPERARD =>
-			RD_WR 		<= '0';
-			ENRD_WR 		<= '1';
-			EN_LFSR		<= '0';
-			ADDR_SEL		<= '1';
-		when COMPARE =>
-			Ext_ready 	<= '0';
-			ADDR_SEL		<= '1';
-		when FINRD =>
-			Ext_ready 	<= '1';
-			EN_LFSR		<= '1';
-			Led_error	<= '0';
-			EN_7Segm		<=	'0';
-			ADDR_SEL		<= '1';
-		when ERROR_DATO =>
-			Led_error	<= '1';
-			EN_7Segm		<=	'1';
-			ADDR_SEL		<= '1';
-		when BLINK_LED =>
-			EN_LFSR		<= '0';
-			LED_RD		<= '1';
-			ADDR_SEL		<= '1';
-		when others =>	null;
-	end case;
+			when IDLE =>
+				direccion	<= (RAM_addr_width-1 downto 0=>'0');
+				RD_WR 		<= '0';
+				ENRD_WR 		<= '0';
+				Ext_ready 	<= '0';
+				SetBotones	<=	'0';
+			when INITWR =>
+				direccion 	<= std_logic_vector(unsigned(direccion)+1);
+				RD_WR 		<= '1';
+				ENRD_WR 		<= '1';
+				Ext_ready 	<= '0';
+				LED_FinWR 	<= '0';
+				LED_RD	 	<= '0';
+				SetBotones	<=	'1';
+			when ESPERAWR =>
+				RD_WR 		<= '1';
+				ENRD_WR 		<= '1';
+				Ext_ready 	<= '0';
+			when LOADDATA =>
+				RD_WR 		<= '1';
+				ENRD_WR 		<= '1';
+				Ext_ready 	<= '1';
+			when PRENDERLED =>
+				RD_WR 		<= '1';
+				ENRD_WR 		<= '0';
+				Ext_ready 	<= '0';
+				LED_FinWR 	<= '1';
+	-----------------------------------------------------------------------abajo lectura, arriba escritura			
+			when INITRD =>
+				LOADDIR 		<= '1';
+				RD_WR 		<= '0';
+				ENRD_WR 		<= '1';
+				EN_LFSR 		<= '0';
+				ADDR_SEL		<= '1';
+				LED_FinWR 	<= '0';
+				LED_RD	 	<= '0';
+				SetBotones	<=	'1';
+			when ESPERARD =>
+				RD_WR 		<= '0';
+				ENRD_WR 		<= '1';
+				EN_LFSR		<= '0';
+				ADDR_SEL		<= '1';
+			when COMPARE =>
+				Ext_ready 	<= '0';
+				ADDR_SEL		<= '1';
+			when FINRD =>
+				Ext_ready 	<= '1';
+				EN_LFSR		<= '1';
+				Led_error	<= '0';
+				EN_7Segm		<=	'0';
+				ADDR_SEL		<= '1';
+			when ERROR_DATO =>
+				Led_error	<= '1';
+				EN_7Segm		<=	'1';
+				ADDR_SEL		<= '1';
+			when BLINK_LED =>
+				EN_LFSR		<= '0';
+				LED_RD		<= '1';
+				ADDR_SEL		<= '1';
+			when others =>	null;
+		end case;
 	end if;
  end process;
  end beh;

@@ -163,5 +163,15 @@ port
 	Comparacion		: out std_logic
 );
 end component;
+
+COMPONENT PLL IS
+	PORT
+	(
+		areset		: IN STD_LOGIC;
+		inclk0		: IN STD_LOGIC;
+		c0				: OUT STD_LOGIC ;
+		locked		: OUT STD_LOGIC 
+	);
+END COMPONENT;
 -------------------------------------------------------------------------------------------------------------------------
 end Lab6_Pack;

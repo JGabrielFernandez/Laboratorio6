@@ -1,5 +1,5 @@
 Flow report for Laboratorio6
-Sun Jun 12 19:59:28 2016
+Mon Jun 13 18:23:53 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Jun 12 19:59:28 2016       ;
+; Flow Status                        ; Successful - Mon Jun 13 18:23:53 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio6                                ;
 ; Top-level Entity Name              ; Laboratorio6                                ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/12/2016 19:59:11 ;
+; Start date & time ; 06/13/2016 18:23:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio6        ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id         ;
 +--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
-; COMPILER_SIGNATURE_ID                ; 269322049746858.146577235106640       ; --            ; --          ; --                 ;
+; COMPILER_SIGNATURE_ID                ; 23084203634910.146585301727600        ; --            ; --          ; --                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; LFSR_12_TB         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Laboratorio6_TB    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Control_RAM_FSM_TB ;
@@ -97,6 +97,8 @@ agreement for further details.
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --                 ;
 ; MISC_FILE                            ; ROM_inst.vhd                          ; --            ; --          ; --                 ;
 ; MISC_FILE                            ; ROM.cmp                               ; --            ; --          ; --                 ;
+; MISC_FILE                            ; PLL/PLL.cmp                           ; --            ; --          ; --                 ;
+; MISC_FILE                            ; PLL/PLL.ppf                           ; --            ; --          ; --                 ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --                 ;
 ; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top                ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top                ;
@@ -112,8 +114,8 @@ agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:17     ; 1.0                     ; 819 MB              ; 00:00:40                           ;
-; Total                  ; 00:00:17     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Elaboration ; 00:00:17     ; 1.0                     ; 864 MB              ; 00:00:37                           ;
+; Total                  ; 00:00:17     ; --                      ; --                  ; 00:00:37                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -122,7 +124,7 @@ agreement for further details.
 +------------------------+------------------+-----------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +------------------------+------------------+-----------+------------+----------------+
-; Analysis & Elaboration ; Daniela-NB       ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Elaboration ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
 +------------------------+------------------+-----------+------------+----------------+
 
 

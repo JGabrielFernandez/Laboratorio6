@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Laboratorio6
-Sun Jun 12 19:59:28 2016
+Mon Jun 13 18:23:53 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -11,43 +11,46 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   3. Parallel Compilation
   4. Analysis & Elaboration IP Cores Summary
   5. Source assignments for ROM:ROM1|altsyncram:altsyncram_component|altsyncram_9sq3:auto_generated
-  6. Parameter Settings for User Entity Instance: DATA_BUFFER:ADDR_TO_7SEG
-  7. Parameter Settings for User Entity Instance: DF_HZ:Gen1HZ
-  8. Parameter Settings for User Entity Instance: ROM:ROM1|altsyncram:altsyncram_component
-  9. altsyncram Parameter Settings by Entity Instance
- 10. Analysis & Elaboration Settings
- 11. Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:2:BT"
- 12. Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:1:BT"
- 13. Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:0:BT"
- 14. Port Connectivity Checks: "DF_HZ:Gen1HZ"
- 15. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:0:i0:bit0"
- 16. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:1:i32:bit32"
- 17. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:2:i32:bit32"
- 18. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:3:i32:bit32"
- 19. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:4:i32:bit32"
- 20. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:5:i32:bit32"
- 21. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:6:i32:bit32"
- 22. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:7:i32:bit32"
- 23. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:8:i32:bit32"
- 24. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:9:i32:bit32"
- 25. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:10:i32:bit32"
- 26. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:11:i32:bit32"
- 27. Port Connectivity Checks: "DATA_BUFFER:ADDR_TO_7SEG"
- 28. Port Connectivity Checks: "FF_D_RISING:LEDRD"
- 29. Port Connectivity Checks: "Top_FSM:Gral_FSM"
- 30. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:0:MUX_ADDR"
- 31. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:1:MUX_ADDR"
- 32. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:2:MUX_ADDR"
- 33. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:3:MUX_ADDR"
- 34. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:4:MUX_ADDR"
- 35. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:5:MUX_ADDR"
- 36. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:6:MUX_ADDR"
- 37. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:7:MUX_ADDR"
- 38. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:8:MUX_ADDR"
- 39. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:9:MUX_ADDR"
- 40. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:10:MUX_ADDR"
- 41. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:11:MUX_ADDR"
- 42. Analysis & Elaboration Messages
+  6. Parameter Settings for User Entity Instance: PLL:PLL1|altpll:altpll_component
+  7. Parameter Settings for User Entity Instance: DATA_BUFFER:ADDR_TO_7SEG
+  8. Parameter Settings for User Entity Instance: DF_HZ:Gen1HZ
+  9. Parameter Settings for User Entity Instance: ROM:ROM1|altsyncram:altsyncram_component
+ 10. altpll Parameter Settings by Entity Instance
+ 11. altsyncram Parameter Settings by Entity Instance
+ 12. Analysis & Elaboration Settings
+ 13. Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:2:BT"
+ 14. Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:1:BT"
+ 15. Port Connectivity Checks: "FF_D_FALLING:\RISING_BTS:0:BT"
+ 16. Port Connectivity Checks: "DF_HZ:Gen1HZ"
+ 17. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:0:i0:bit0"
+ 18. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:1:i32:bit32"
+ 19. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:2:i32:bit32"
+ 20. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:3:i32:bit32"
+ 21. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:4:i32:bit32"
+ 22. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:5:i32:bit32"
+ 23. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:6:i32:bit32"
+ 24. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:7:i32:bit32"
+ 25. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:8:i32:bit32"
+ 26. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:9:i32:bit32"
+ 27. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:10:i32:bit32"
+ 28. Port Connectivity Checks: "LFSR_12:LFSR|FF_D_RISING:\LFSR:11:i32:bit32"
+ 29. Port Connectivity Checks: "DATA_BUFFER:ADDR_TO_7SEG"
+ 30. Port Connectivity Checks: "FF_D_RISING:LEDRD"
+ 31. Port Connectivity Checks: "Top_FSM:Gral_FSM"
+ 32. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:0:MUX_ADDR"
+ 33. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:1:MUX_ADDR"
+ 34. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:2:MUX_ADDR"
+ 35. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:3:MUX_ADDR"
+ 36. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:4:MUX_ADDR"
+ 37. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:5:MUX_ADDR"
+ 38. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:6:MUX_ADDR"
+ 39. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:7:MUX_ADDR"
+ 40. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:8:MUX_ADDR"
+ 41. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:9:MUX_ADDR"
+ 42. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:10:MUX_ADDR"
+ 43. Port Connectivity Checks: "MUX_4_1:\REG_ADDR:11:MUX_ADDR"
+ 44. Port Connectivity Checks: "PLL:PLL1"
+ 45. Analysis & Elaboration Messages
 
 
 
@@ -74,7 +77,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sun Jun 12 19:59:28 2016       ;
+; Analysis & Elaboration Status      ; Successful - Mon Jun 13 18:23:53 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio6                                ;
 ; Top-level Entity Name              ; Laboratorio6                                ;
@@ -97,7 +100,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -107,6 +110,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------+--------------+---------+--------------+--------------+------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance        ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+; Altera ; ALTPLL       ; 15.1    ; N/A          ; N/A          ; |Laboratorio6|PLL:PLL1 ; PLL/PLL.vhd     ;
 ; Altera ; ROM: 1-PORT  ; 15.1    ; N/A          ; N/A          ; |Laboratorio6|ROM:ROM1 ; ROM.vhd         ;
 +--------+--------------+---------+--------------+--------------+------------------------+-----------------+
 
@@ -118,6 +122,380 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+--------------------+------+----------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                ;
 +---------------------------------+--------------------+------+----------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PLL:PLL1|altpll:altpll_component ;
++-------------------------------+-----------------------+-----------------------+
+; Parameter Name                ; Value                 ; Type                  ;
++-------------------------------+-----------------------+-----------------------+
+; OPERATION_MODE                ; NORMAL                ; Untyped               ;
+; PLL_TYPE                      ; AUTO                  ; Untyped               ;
+; LPM_HINT                      ; CBX_MODULE_PREFIX=PLL ; Untyped               ;
+; QUALIFY_CONF_DONE             ; OFF                   ; Untyped               ;
+; COMPENSATE_CLOCK              ; CLK0                  ; Untyped               ;
+; SCAN_CHAIN                    ; LONG                  ; Untyped               ;
+; PRIMARY_CLOCK                 ; INCLK0                ; Untyped               ;
+; INCLK0_INPUT_FREQUENCY        ; 20000                 ; Signed Integer        ;
+; INCLK1_INPUT_FREQUENCY        ; 0                     ; Untyped               ;
+; GATE_LOCK_SIGNAL              ; NO                    ; Untyped               ;
+; GATE_LOCK_COUNTER             ; 0                     ; Untyped               ;
+; LOCK_HIGH                     ; 1                     ; Untyped               ;
+; LOCK_LOW                      ; 1                     ; Untyped               ;
+; VALID_LOCK_MULTIPLIER         ; 1                     ; Untyped               ;
+; INVALID_LOCK_MULTIPLIER       ; 5                     ; Untyped               ;
+; SWITCH_OVER_ON_LOSSCLK        ; OFF                   ; Untyped               ;
+; SWITCH_OVER_ON_GATED_LOCK     ; OFF                   ; Untyped               ;
+; ENABLE_SWITCH_OVER_COUNTER    ; OFF                   ; Untyped               ;
+; SKIP_VCO                      ; OFF                   ; Untyped               ;
+; SWITCH_OVER_COUNTER           ; 0                     ; Untyped               ;
+; SWITCH_OVER_TYPE              ; AUTO                  ; Untyped               ;
+; FEEDBACK_SOURCE               ; EXTCLK0               ; Untyped               ;
+; BANDWIDTH                     ; 0                     ; Untyped               ;
+; BANDWIDTH_TYPE                ; AUTO                  ; Untyped               ;
+; SPREAD_FREQUENCY              ; 0                     ; Untyped               ;
+; DOWN_SPREAD                   ; 0                     ; Untyped               ;
+; SELF_RESET_ON_GATED_LOSS_LOCK ; OFF                   ; Untyped               ;
+; SELF_RESET_ON_LOSS_LOCK       ; OFF                   ; Untyped               ;
+; CLK9_MULTIPLY_BY              ; 0                     ; Untyped               ;
+; CLK8_MULTIPLY_BY              ; 0                     ; Untyped               ;
+; CLK7_MULTIPLY_BY              ; 0                     ; Untyped               ;
+; CLK6_MULTIPLY_BY              ; 0                     ; Untyped               ;
+; CLK5_MULTIPLY_BY              ; 1                     ; Untyped               ;
+; CLK4_MULTIPLY_BY              ; 1                     ; Untyped               ;
+; CLK3_MULTIPLY_BY              ; 1                     ; Untyped               ;
+; CLK2_MULTIPLY_BY              ; 1                     ; Untyped               ;
+; CLK1_MULTIPLY_BY              ; 1                     ; Untyped               ;
+; CLK0_MULTIPLY_BY              ; 20                    ; Signed Integer        ;
+; CLK9_DIVIDE_BY                ; 0                     ; Untyped               ;
+; CLK8_DIVIDE_BY                ; 0                     ; Untyped               ;
+; CLK7_DIVIDE_BY                ; 0                     ; Untyped               ;
+; CLK6_DIVIDE_BY                ; 0                     ; Untyped               ;
+; CLK5_DIVIDE_BY                ; 1                     ; Untyped               ;
+; CLK4_DIVIDE_BY                ; 1                     ; Untyped               ;
+; CLK3_DIVIDE_BY                ; 1                     ; Untyped               ;
+; CLK2_DIVIDE_BY                ; 1                     ; Untyped               ;
+; CLK1_DIVIDE_BY                ; 1                     ; Untyped               ;
+; CLK0_DIVIDE_BY                ; 1                     ; Signed Integer        ;
+; CLK9_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK8_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK7_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK6_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK5_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK4_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK3_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK2_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK1_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK0_PHASE_SHIFT              ; 0                     ; Untyped               ;
+; CLK5_TIME_DELAY               ; 0                     ; Untyped               ;
+; CLK4_TIME_DELAY               ; 0                     ; Untyped               ;
+; CLK3_TIME_DELAY               ; 0                     ; Untyped               ;
+; CLK2_TIME_DELAY               ; 0                     ; Untyped               ;
+; CLK1_TIME_DELAY               ; 0                     ; Untyped               ;
+; CLK0_TIME_DELAY               ; 0                     ; Untyped               ;
+; CLK9_DUTY_CYCLE               ; 50                    ; Untyped               ;
+; CLK8_DUTY_CYCLE               ; 50                    ; Untyped               ;
+; CLK7_DUTY_CYCLE               ; 50                    ; Untyped               ;
+; CLK6_DUTY_CYCLE               ; 50                    ; Untyped               ;
+; CLK5_DUTY_CYCLE               ; 50                    ; Untyped               ;
+; CLK4_DUTY_CYCLE               ; 50                    ; Untyped               ;
+; CLK3_DUTY_CYCLE               ; 50                    ; Untyped               ;
+; CLK2_DUTY_CYCLE               ; 50                    ; Untyped               ;
+; CLK1_DUTY_CYCLE               ; 50                    ; Untyped               ;
+; CLK0_DUTY_CYCLE               ; 50                    ; Signed Integer        ;
+; CLK9_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK8_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK7_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK6_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK5_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK4_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK3_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK2_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK1_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK0_USE_EVEN_COUNTER_MODE    ; OFF                   ; Untyped               ;
+; CLK9_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; CLK8_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; CLK7_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; CLK6_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; CLK5_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; CLK4_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; CLK3_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; CLK2_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; CLK1_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; CLK0_USE_EVEN_COUNTER_VALUE   ; OFF                   ; Untyped               ;
+; LOCK_WINDOW_UI                ;  0.05                 ; Untyped               ;
+; LOCK_WINDOW_UI_BITS           ; UNUSED                ; Untyped               ;
+; VCO_RANGE_DETECTOR_LOW_BITS   ; UNUSED                ; Untyped               ;
+; VCO_RANGE_DETECTOR_HIGH_BITS  ; UNUSED                ; Untyped               ;
+; DPA_MULTIPLY_BY               ; 0                     ; Untyped               ;
+; DPA_DIVIDE_BY                 ; 1                     ; Untyped               ;
+; DPA_DIVIDER                   ; 0                     ; Untyped               ;
+; EXTCLK3_MULTIPLY_BY           ; 1                     ; Untyped               ;
+; EXTCLK2_MULTIPLY_BY           ; 1                     ; Untyped               ;
+; EXTCLK1_MULTIPLY_BY           ; 1                     ; Untyped               ;
+; EXTCLK0_MULTIPLY_BY           ; 1                     ; Untyped               ;
+; EXTCLK3_DIVIDE_BY             ; 1                     ; Untyped               ;
+; EXTCLK2_DIVIDE_BY             ; 1                     ; Untyped               ;
+; EXTCLK1_DIVIDE_BY             ; 1                     ; Untyped               ;
+; EXTCLK0_DIVIDE_BY             ; 1                     ; Untyped               ;
+; EXTCLK3_PHASE_SHIFT           ; 0                     ; Untyped               ;
+; EXTCLK2_PHASE_SHIFT           ; 0                     ; Untyped               ;
+; EXTCLK1_PHASE_SHIFT           ; 0                     ; Untyped               ;
+; EXTCLK0_PHASE_SHIFT           ; 0                     ; Untyped               ;
+; EXTCLK3_TIME_DELAY            ; 0                     ; Untyped               ;
+; EXTCLK2_TIME_DELAY            ; 0                     ; Untyped               ;
+; EXTCLK1_TIME_DELAY            ; 0                     ; Untyped               ;
+; EXTCLK0_TIME_DELAY            ; 0                     ; Untyped               ;
+; EXTCLK3_DUTY_CYCLE            ; 50                    ; Untyped               ;
+; EXTCLK2_DUTY_CYCLE            ; 50                    ; Untyped               ;
+; EXTCLK1_DUTY_CYCLE            ; 50                    ; Untyped               ;
+; EXTCLK0_DUTY_CYCLE            ; 50                    ; Untyped               ;
+; VCO_MULTIPLY_BY               ; 0                     ; Untyped               ;
+; VCO_DIVIDE_BY                 ; 0                     ; Untyped               ;
+; SCLKOUT0_PHASE_SHIFT          ; 0                     ; Untyped               ;
+; SCLKOUT1_PHASE_SHIFT          ; 0                     ; Untyped               ;
+; VCO_MIN                       ; 0                     ; Untyped               ;
+; VCO_MAX                       ; 0                     ; Untyped               ;
+; VCO_CENTER                    ; 0                     ; Untyped               ;
+; PFD_MIN                       ; 0                     ; Untyped               ;
+; PFD_MAX                       ; 0                     ; Untyped               ;
+; M_INITIAL                     ; 0                     ; Untyped               ;
+; M                             ; 0                     ; Untyped               ;
+; N                             ; 1                     ; Untyped               ;
+; M2                            ; 1                     ; Untyped               ;
+; N2                            ; 1                     ; Untyped               ;
+; SS                            ; 1                     ; Untyped               ;
+; C0_HIGH                       ; 0                     ; Untyped               ;
+; C1_HIGH                       ; 0                     ; Untyped               ;
+; C2_HIGH                       ; 0                     ; Untyped               ;
+; C3_HIGH                       ; 0                     ; Untyped               ;
+; C4_HIGH                       ; 0                     ; Untyped               ;
+; C5_HIGH                       ; 0                     ; Untyped               ;
+; C6_HIGH                       ; 0                     ; Untyped               ;
+; C7_HIGH                       ; 0                     ; Untyped               ;
+; C8_HIGH                       ; 0                     ; Untyped               ;
+; C9_HIGH                       ; 0                     ; Untyped               ;
+; C0_LOW                        ; 0                     ; Untyped               ;
+; C1_LOW                        ; 0                     ; Untyped               ;
+; C2_LOW                        ; 0                     ; Untyped               ;
+; C3_LOW                        ; 0                     ; Untyped               ;
+; C4_LOW                        ; 0                     ; Untyped               ;
+; C5_LOW                        ; 0                     ; Untyped               ;
+; C6_LOW                        ; 0                     ; Untyped               ;
+; C7_LOW                        ; 0                     ; Untyped               ;
+; C8_LOW                        ; 0                     ; Untyped               ;
+; C9_LOW                        ; 0                     ; Untyped               ;
+; C0_INITIAL                    ; 0                     ; Untyped               ;
+; C1_INITIAL                    ; 0                     ; Untyped               ;
+; C2_INITIAL                    ; 0                     ; Untyped               ;
+; C3_INITIAL                    ; 0                     ; Untyped               ;
+; C4_INITIAL                    ; 0                     ; Untyped               ;
+; C5_INITIAL                    ; 0                     ; Untyped               ;
+; C6_INITIAL                    ; 0                     ; Untyped               ;
+; C7_INITIAL                    ; 0                     ; Untyped               ;
+; C8_INITIAL                    ; 0                     ; Untyped               ;
+; C9_INITIAL                    ; 0                     ; Untyped               ;
+; C0_MODE                       ; BYPASS                ; Untyped               ;
+; C1_MODE                       ; BYPASS                ; Untyped               ;
+; C2_MODE                       ; BYPASS                ; Untyped               ;
+; C3_MODE                       ; BYPASS                ; Untyped               ;
+; C4_MODE                       ; BYPASS                ; Untyped               ;
+; C5_MODE                       ; BYPASS                ; Untyped               ;
+; C6_MODE                       ; BYPASS                ; Untyped               ;
+; C7_MODE                       ; BYPASS                ; Untyped               ;
+; C8_MODE                       ; BYPASS                ; Untyped               ;
+; C9_MODE                       ; BYPASS                ; Untyped               ;
+; C0_PH                         ; 0                     ; Untyped               ;
+; C1_PH                         ; 0                     ; Untyped               ;
+; C2_PH                         ; 0                     ; Untyped               ;
+; C3_PH                         ; 0                     ; Untyped               ;
+; C4_PH                         ; 0                     ; Untyped               ;
+; C5_PH                         ; 0                     ; Untyped               ;
+; C6_PH                         ; 0                     ; Untyped               ;
+; C7_PH                         ; 0                     ; Untyped               ;
+; C8_PH                         ; 0                     ; Untyped               ;
+; C9_PH                         ; 0                     ; Untyped               ;
+; L0_HIGH                       ; 1                     ; Untyped               ;
+; L1_HIGH                       ; 1                     ; Untyped               ;
+; G0_HIGH                       ; 1                     ; Untyped               ;
+; G1_HIGH                       ; 1                     ; Untyped               ;
+; G2_HIGH                       ; 1                     ; Untyped               ;
+; G3_HIGH                       ; 1                     ; Untyped               ;
+; E0_HIGH                       ; 1                     ; Untyped               ;
+; E1_HIGH                       ; 1                     ; Untyped               ;
+; E2_HIGH                       ; 1                     ; Untyped               ;
+; E3_HIGH                       ; 1                     ; Untyped               ;
+; L0_LOW                        ; 1                     ; Untyped               ;
+; L1_LOW                        ; 1                     ; Untyped               ;
+; G0_LOW                        ; 1                     ; Untyped               ;
+; G1_LOW                        ; 1                     ; Untyped               ;
+; G2_LOW                        ; 1                     ; Untyped               ;
+; G3_LOW                        ; 1                     ; Untyped               ;
+; E0_LOW                        ; 1                     ; Untyped               ;
+; E1_LOW                        ; 1                     ; Untyped               ;
+; E2_LOW                        ; 1                     ; Untyped               ;
+; E3_LOW                        ; 1                     ; Untyped               ;
+; L0_INITIAL                    ; 1                     ; Untyped               ;
+; L1_INITIAL                    ; 1                     ; Untyped               ;
+; G0_INITIAL                    ; 1                     ; Untyped               ;
+; G1_INITIAL                    ; 1                     ; Untyped               ;
+; G2_INITIAL                    ; 1                     ; Untyped               ;
+; G3_INITIAL                    ; 1                     ; Untyped               ;
+; E0_INITIAL                    ; 1                     ; Untyped               ;
+; E1_INITIAL                    ; 1                     ; Untyped               ;
+; E2_INITIAL                    ; 1                     ; Untyped               ;
+; E3_INITIAL                    ; 1                     ; Untyped               ;
+; L0_MODE                       ; BYPASS                ; Untyped               ;
+; L1_MODE                       ; BYPASS                ; Untyped               ;
+; G0_MODE                       ; BYPASS                ; Untyped               ;
+; G1_MODE                       ; BYPASS                ; Untyped               ;
+; G2_MODE                       ; BYPASS                ; Untyped               ;
+; G3_MODE                       ; BYPASS                ; Untyped               ;
+; E0_MODE                       ; BYPASS                ; Untyped               ;
+; E1_MODE                       ; BYPASS                ; Untyped               ;
+; E2_MODE                       ; BYPASS                ; Untyped               ;
+; E3_MODE                       ; BYPASS                ; Untyped               ;
+; L0_PH                         ; 0                     ; Untyped               ;
+; L1_PH                         ; 0                     ; Untyped               ;
+; G0_PH                         ; 0                     ; Untyped               ;
+; G1_PH                         ; 0                     ; Untyped               ;
+; G2_PH                         ; 0                     ; Untyped               ;
+; G3_PH                         ; 0                     ; Untyped               ;
+; E0_PH                         ; 0                     ; Untyped               ;
+; E1_PH                         ; 0                     ; Untyped               ;
+; E2_PH                         ; 0                     ; Untyped               ;
+; E3_PH                         ; 0                     ; Untyped               ;
+; M_PH                          ; 0                     ; Untyped               ;
+; C1_USE_CASC_IN                ; OFF                   ; Untyped               ;
+; C2_USE_CASC_IN                ; OFF                   ; Untyped               ;
+; C3_USE_CASC_IN                ; OFF                   ; Untyped               ;
+; C4_USE_CASC_IN                ; OFF                   ; Untyped               ;
+; C5_USE_CASC_IN                ; OFF                   ; Untyped               ;
+; C6_USE_CASC_IN                ; OFF                   ; Untyped               ;
+; C7_USE_CASC_IN                ; OFF                   ; Untyped               ;
+; C8_USE_CASC_IN                ; OFF                   ; Untyped               ;
+; C9_USE_CASC_IN                ; OFF                   ; Untyped               ;
+; CLK0_COUNTER                  ; G0                    ; Untyped               ;
+; CLK1_COUNTER                  ; G0                    ; Untyped               ;
+; CLK2_COUNTER                  ; G0                    ; Untyped               ;
+; CLK3_COUNTER                  ; G0                    ; Untyped               ;
+; CLK4_COUNTER                  ; G0                    ; Untyped               ;
+; CLK5_COUNTER                  ; G0                    ; Untyped               ;
+; CLK6_COUNTER                  ; E0                    ; Untyped               ;
+; CLK7_COUNTER                  ; E1                    ; Untyped               ;
+; CLK8_COUNTER                  ; E2                    ; Untyped               ;
+; CLK9_COUNTER                  ; E3                    ; Untyped               ;
+; L0_TIME_DELAY                 ; 0                     ; Untyped               ;
+; L1_TIME_DELAY                 ; 0                     ; Untyped               ;
+; G0_TIME_DELAY                 ; 0                     ; Untyped               ;
+; G1_TIME_DELAY                 ; 0                     ; Untyped               ;
+; G2_TIME_DELAY                 ; 0                     ; Untyped               ;
+; G3_TIME_DELAY                 ; 0                     ; Untyped               ;
+; E0_TIME_DELAY                 ; 0                     ; Untyped               ;
+; E1_TIME_DELAY                 ; 0                     ; Untyped               ;
+; E2_TIME_DELAY                 ; 0                     ; Untyped               ;
+; E3_TIME_DELAY                 ; 0                     ; Untyped               ;
+; M_TIME_DELAY                  ; 0                     ; Untyped               ;
+; N_TIME_DELAY                  ; 0                     ; Untyped               ;
+; EXTCLK3_COUNTER               ; E3                    ; Untyped               ;
+; EXTCLK2_COUNTER               ; E2                    ; Untyped               ;
+; EXTCLK1_COUNTER               ; E1                    ; Untyped               ;
+; EXTCLK0_COUNTER               ; E0                    ; Untyped               ;
+; ENABLE0_COUNTER               ; L0                    ; Untyped               ;
+; ENABLE1_COUNTER               ; L0                    ; Untyped               ;
+; CHARGE_PUMP_CURRENT           ; 2                     ; Untyped               ;
+; LOOP_FILTER_R                 ;  1.000000             ; Untyped               ;
+; LOOP_FILTER_C                 ; 5                     ; Untyped               ;
+; CHARGE_PUMP_CURRENT_BITS      ; 9999                  ; Untyped               ;
+; LOOP_FILTER_R_BITS            ; 9999                  ; Untyped               ;
+; LOOP_FILTER_C_BITS            ; 9999                  ; Untyped               ;
+; VCO_POST_SCALE                ; 0                     ; Untyped               ;
+; CLK2_OUTPUT_FREQUENCY         ; 0                     ; Untyped               ;
+; CLK1_OUTPUT_FREQUENCY         ; 0                     ; Untyped               ;
+; CLK0_OUTPUT_FREQUENCY         ; 0                     ; Untyped               ;
+; INTENDED_DEVICE_FAMILY        ; Cyclone IV E          ; Untyped               ;
+; PORT_CLKENA0                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLKENA1                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLKENA2                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLKENA3                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLKENA4                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLKENA5                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_EXTCLKENA0               ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_EXTCLKENA1               ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_EXTCLKENA2               ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_EXTCLKENA3               ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_EXTCLK0                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_EXTCLK1                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_EXTCLK2                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_EXTCLK3                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLKBAD0                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLKBAD1                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLK0                     ; PORT_USED             ; Untyped               ;
+; PORT_CLK1                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLK2                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLK3                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLK4                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLK5                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLK6                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLK7                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLK8                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLK9                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_SCANDATA                 ; PORT_UNUSED           ; Untyped               ;
+; PORT_SCANDATAOUT              ; PORT_UNUSED           ; Untyped               ;
+; PORT_SCANDONE                 ; PORT_UNUSED           ; Untyped               ;
+; PORT_SCLKOUT1                 ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_SCLKOUT0                 ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_ACTIVECLOCK              ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLKLOSS                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_INCLK1                   ; PORT_UNUSED           ; Untyped               ;
+; PORT_INCLK0                   ; PORT_USED             ; Untyped               ;
+; PORT_FBIN                     ; PORT_UNUSED           ; Untyped               ;
+; PORT_PLLENA                   ; PORT_UNUSED           ; Untyped               ;
+; PORT_CLKSWITCH                ; PORT_UNUSED           ; Untyped               ;
+; PORT_ARESET                   ; PORT_USED             ; Untyped               ;
+; PORT_PFDENA                   ; PORT_UNUSED           ; Untyped               ;
+; PORT_SCANCLK                  ; PORT_UNUSED           ; Untyped               ;
+; PORT_SCANACLR                 ; PORT_UNUSED           ; Untyped               ;
+; PORT_SCANREAD                 ; PORT_UNUSED           ; Untyped               ;
+; PORT_SCANWRITE                ; PORT_UNUSED           ; Untyped               ;
+; PORT_ENABLE0                  ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_ENABLE1                  ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_LOCKED                   ; PORT_USED             ; Untyped               ;
+; PORT_CONFIGUPDATE             ; PORT_UNUSED           ; Untyped               ;
+; PORT_FBOUT                    ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_PHASEDONE                ; PORT_UNUSED           ; Untyped               ;
+; PORT_PHASESTEP                ; PORT_UNUSED           ; Untyped               ;
+; PORT_PHASEUPDOWN              ; PORT_UNUSED           ; Untyped               ;
+; PORT_SCANCLKENA               ; PORT_UNUSED           ; Untyped               ;
+; PORT_PHASECOUNTERSELECT       ; PORT_UNUSED           ; Untyped               ;
+; PORT_VCOOVERRANGE             ; PORT_CONNECTIVITY     ; Untyped               ;
+; PORT_VCOUNDERRANGE            ; PORT_CONNECTIVITY     ; Untyped               ;
+; M_TEST_SOURCE                 ; 5                     ; Untyped               ;
+; C0_TEST_SOURCE                ; 5                     ; Untyped               ;
+; C1_TEST_SOURCE                ; 5                     ; Untyped               ;
+; C2_TEST_SOURCE                ; 5                     ; Untyped               ;
+; C3_TEST_SOURCE                ; 5                     ; Untyped               ;
+; C4_TEST_SOURCE                ; 5                     ; Untyped               ;
+; C5_TEST_SOURCE                ; 5                     ; Untyped               ;
+; C6_TEST_SOURCE                ; 5                     ; Untyped               ;
+; C7_TEST_SOURCE                ; 5                     ; Untyped               ;
+; C8_TEST_SOURCE                ; 5                     ; Untyped               ;
+; C9_TEST_SOURCE                ; 5                     ; Untyped               ;
+; CBXI_PARAMETER                ; PLL_altpll            ; Untyped               ;
+; VCO_FREQUENCY_CONTROL         ; AUTO                  ; Untyped               ;
+; VCO_PHASE_SHIFT_STEP          ; 0                     ; Untyped               ;
+; WIDTH_CLOCK                   ; 5                     ; Signed Integer        ;
+; WIDTH_PHASECOUNTERSELECT      ; 4                     ; Untyped               ;
+; USING_FBMIMICBIDIR_PORT       ; OFF                   ; Untyped               ;
+; DEVICE_FAMILY                 ; Cyclone IV E          ; Untyped               ;
+; SCAN_CHAIN_MIF_FILE           ; UNUSED                ; Untyped               ;
+; SIM_GATE_LOCK_DEVICE_BEHAVIOR ; OFF                   ; Untyped               ;
+; AUTO_CARRY_CHAINS             ; ON                    ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS          ; OFF                   ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS           ; ON                    ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS        ; OFF                   ; IGNORE_CASCADE        ;
++-------------------------------+-----------------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------+
@@ -199,6 +577,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CBXI_PARAMETER                     ; altsyncram_9sq3      ; Untyped                   ;
 +------------------------------------+----------------------+---------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                     ;
++-------------------------------+----------------------------------+
+; Name                          ; Value                            ;
++-------------------------------+----------------------------------+
+; Number of entity instances    ; 1                                ;
+; Entity Instance               ; PLL:PLL1|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                           ;
+;     -- PLL_TYPE               ; AUTO                             ;
+;     -- PRIMARY_CLOCK          ; INCLK0                           ;
+;     -- INCLK0_INPUT_FREQUENCY ; 20000                            ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                ;
+;     -- VCO_MULTIPLY_BY        ; 0                                ;
+;     -- VCO_DIVIDE_BY          ; 0                                ;
++-------------------------------+----------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -619,91 +1014,152 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+-------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PLL:PLL1"                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; locked ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sun Jun 12 19:59:11 2016
+    Info: Processing started: Mon Jun 13 18:23:36 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio6 -c Laboratorio6 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file top_fsm.vhd
-    Info (12022): Found design unit 1: Top_FSM-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 30
-    Info (12023): Found entity 1: Top_FSM File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 6
+    Info (12022): Found design unit 1: Top_FSM-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 30
+    Info (12023): Found entity 1: Top_FSM File: E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: rom-SYN File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ROM.vhd Line: 53
-    Info (12023): Found entity 1: ROM File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ROM.vhd Line: 43
+    Info (12022): Found design unit 1: rom-SYN File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 53
+    Info (12023): Found entity 1: ROM File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file laboratorio6.vhd
-    Info (12022): Found design unit 1: Laboratorio6-BEH File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 31
-    Info (12023): Found entity 1: Laboratorio6 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 6
+    Info (12022): Found design unit 1: Laboratorio6-BEH File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 31
+    Info (12023): Found entity 1: Laboratorio6 File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ff_d_rising.vhd
-    Info (12022): Found design unit 1: FF_D_RISING-flow File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/FF_D_RISING.vhd Line: 20
-    Info (12023): Found entity 1: FF_D_RISING File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/FF_D_RISING.vhd Line: 5
+    Info (12022): Found design unit 1: FF_D_RISING-flow File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_RISING.vhd Line: 20
+    Info (12023): Found entity 1: FF_D_RISING File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_RISING.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ff_d_falling.vhd
-    Info (12022): Found design unit 1: FF_D_FALLING-flow File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/FF_D_FALLING.vhd Line: 19
-    Info (12023): Found entity 1: FF_D_FALLING File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/FF_D_FALLING.vhd Line: 5
+    Info (12022): Found design unit 1: FF_D_FALLING-flow File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_FALLING.vhd Line: 19
+    Info (12023): Found entity 1: FF_D_FALLING File: E:/Mega/Facultad/FPGA/Laboratorio6/FF_D_FALLING.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_hz.vhd
-    Info (12022): Found design unit 1: DF_HZ-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DF_HZ.vhd Line: 27
-    Info (12023): Found entity 1: DF_HZ File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DF_HZ.vhd Line: 8
+    Info (12022): Found design unit 1: DF_HZ-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/DF_HZ.vhd Line: 27
+    Info (12023): Found entity 1: DF_HZ File: E:/Mega/Facultad/FPGA/Laboratorio6/DF_HZ.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file control_ram_fsm_tb.vhd
-    Info (12022): Found design unit 1: Control_RAM_FSM_TB-tb File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd Line: 8
-    Info (12023): Found entity 1: Control_RAM_FSM_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd Line: 5
+    Info (12022): Found design unit 1: Control_RAM_FSM_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd Line: 8
+    Info (12023): Found entity 1: Control_RAM_FSM_TB File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM_TB.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file control_ram_fsm.vhd
-    Info (12022): Found design unit 1: Control_RAM_FSM-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM.vhd Line: 23
-    Info (12023): Found entity 1: Control_RAM_FSM File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Control_RAM_FSM.vhd Line: 5
+    Info (12022): Found design unit 1: Control_RAM_FSM-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM.vhd Line: 23
+    Info (12023): Found entity 1: Control_RAM_FSM File: E:/Mega/Facultad/FPGA/Laboratorio6/Control_RAM_FSM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
-    Info (12022): Found design unit 1: Comparador-beh File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Comparador.vhd Line: 17
-    Info (12023): Found entity 1: Comparador File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Comparador.vhd Line: 5
+    Info (12022): Found design unit 1: Comparador-beh File: E:/Mega/Facultad/FPGA/Laboratorio6/Comparador.vhd Line: 17
+    Info (12023): Found entity 1: Comparador File: E:/Mega/Facultad/FPGA/Laboratorio6/Comparador.vhd Line: 5
 Info (12021): Found 1 design units, including 0 entities, in source file lab6_package.vhd
-    Info (12022): Found design unit 1: Lab6_Pack File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Lab6_Package.vhd Line: 5
+    Info (12022): Found design unit 1: Lab6_Pack File: E:/Mega/Facultad/FPGA/Laboratorio6/Lab6_Package.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_12_tb.vhd
-    Info (12022): Found design unit 1: LFSR_12_TB-test File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 7
-    Info (12023): Found entity 1: LFSR_12_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 4
+    Info (12022): Found design unit 1: LFSR_12_TB-test File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 7
+    Info (12023): Found entity 1: LFSR_12_TB File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12_TB.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr_12.vhd
-    Info (12022): Found design unit 1: LFSR_12-shift File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd Line: 21
-    Info (12023): Found entity 1: LFSR_12 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/LFSR_12.vhd Line: 8
+    Info (12022): Found design unit 1: LFSR_12-shift File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12.vhd Line: 21
+    Info (12023): Found entity 1: LFSR_12 File: E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file mux_4_1.vhd
-    Info (12022): Found design unit 1: MUX_4_1-flujo File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/MUX_4_1.vhd Line: 13
-    Info (12023): Found entity 1: MUX_4_1 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/MUX_4_1.vhd Line: 4
+    Info (12022): Found design unit 1: MUX_4_1-flujo File: E:/Mega/Facultad/FPGA/Laboratorio6/MUX_4_1.vhd Line: 13
+    Info (12023): Found entity 1: MUX_4_1 File: E:/Mega/Facultad/FPGA/Laboratorio6/MUX_4_1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file data_buffer.vhd
-    Info (12022): Found design unit 1: DATA_BUFFER-BEH File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DATA_BUFFER.vhd Line: 18
-    Info (12023): Found entity 1: DATA_BUFFER File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DATA_BUFFER.vhd Line: 5
+    Info (12022): Found design unit 1: DATA_BUFFER-BEH File: E:/Mega/Facultad/FPGA/Laboratorio6/DATA_BUFFER.vhd Line: 18
+    Info (12023): Found entity 1: DATA_BUFFER File: E:/Mega/Facultad/FPGA/Laboratorio6/DATA_BUFFER.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dec_hex_7seg.vhd
-    Info (12022): Found design unit 1: DEC_HEX_7SEG-DECOD File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd Line: 13
-    Info (12023): Found entity 1: DEC_HEX_7SEG File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd Line: 4
+    Info (12022): Found design unit 1: DEC_HEX_7SEG-DECOD File: E:/Mega/Facultad/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd Line: 13
+    Info (12023): Found entity 1: DEC_HEX_7SEG File: E:/Mega/Facultad/FPGA/Laboratorio6/DEC_HEX_7SEG.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file laboratorio6_tb.vhd
-    Info (12022): Found design unit 1: Laboratorio6_TB-tb File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6_TB.vhd Line: 9
-    Info (12023): Found entity 1: Laboratorio6_TB File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6_TB.vhd Line: 6
+    Info (12022): Found design unit 1: Laboratorio6_TB-tb File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6_TB.vhd Line: 9
+    Info (12023): Found entity 1: Laboratorio6_TB File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6_TB.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pll/pll.vhd
+    Info (12022): Found design unit 1: pll-SYN File: E:/Mega/Facultad/FPGA/Laboratorio6/PLL/PLL.vhd Line: 54
+    Info (12023): Found entity 1: PLL File: E:/Mega/Facultad/FPGA/Laboratorio6/PLL/PLL.vhd Line: 43
 Info (12127): Elaborating entity "Laboratorio6" for the top level hierarchy
-Info (12128): Elaborating entity "MUX_4_1" for hierarchy "MUX_4_1:\REG_ADDR:11:MUX_ADDR" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 57
-Info (12128): Elaborating entity "Control_RAM_FSM" for hierarchy "Control_RAM_FSM:RAM_FSM" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 68
-Info (12128): Elaborating entity "Top_FSM" for hierarchy "Top_FSM:Gral_FSM" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 82
-Warning (10631): VHDL Process Statement warning at Top_FSM.vhd(40): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at Top_FSM.vhd(125): signal "Clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 125
-Info (10041): Inferred latch for "next_state.BLINK_LED" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.ERROR_DATO" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.FINRD" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.COMPARE" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.ESPERARD" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.INITRD" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.PRENDERLED" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.LOADDATA" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.ESPERAWR" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.INITWR" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (10041): Inferred latch for "next_state.IDLE" at Top_FSM.vhd(40) File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Top_FSM.vhd Line: 40
-Info (12128): Elaborating entity "FF_D_RISING" for hierarchy "FF_D_RISING:LEDRD" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 104
-Info (12128): Elaborating entity "DATA_BUFFER" for hierarchy "DATA_BUFFER:ADDR_TO_7SEG" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at DATA_BUFFER.vhd(23): signal "CLEAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DATA_BUFFER.vhd Line: 23
-Info (12128): Elaborating entity "DEC_HEX_7SEG" for hierarchy "DEC_HEX_7SEG:DISP0OUT" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 123
-Info (12128): Elaborating entity "LFSR_12" for hierarchy "LFSR_12:LFSR" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 127
-Info (12128): Elaborating entity "DF_HZ" for hierarchy "DF_HZ:Gen1HZ" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 134
-Info (12128): Elaborating entity "DEC_HEX_7SEG" for hierarchy "DF_HZ:Gen1HZ|DEC_HEX_7SEG:DEC1" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/DF_HZ.vhd Line: 113
-Info (12128): Elaborating entity "FF_D_FALLING" for hierarchy "FF_D_FALLING:\RISING_BTS:0:BT" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 144
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 154
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:ROM1|altsyncram:altsyncram_component" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ROM.vhd Line: 60
-Info (12130): Elaborated megafunction instantiation "ROM:ROM1|altsyncram:altsyncram_component" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ROM.vhd Line: 60
-Info (12133): Instantiated megafunction "ROM:ROM1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/ROM.vhd Line: 60
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:PLL1" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 56
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL:PLL1|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio6/PLL/PLL.vhd Line: 141
+Info (12130): Elaborated megafunction instantiation "PLL:PLL1|altpll:altpll_component" File: E:/Mega/Facultad/FPGA/Laboratorio6/PLL/PLL.vhd Line: 141
+Info (12133): Instantiated megafunction "PLL:PLL1|altpll:altpll_component" with the following parameter: File: E:/Mega/Facultad/FPGA/Laboratorio6/PLL/PLL.vhd Line: 141
+    Info (12134): Parameter "bandwidth_type" = "AUTO"
+    Info (12134): Parameter "clk0_divide_by" = "1"
+    Info (12134): Parameter "clk0_duty_cycle" = "50"
+    Info (12134): Parameter "clk0_multiply_by" = "20"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "compensate_clock" = "CLK0"
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=PLL"
+    Info (12134): Parameter "lpm_type" = "altpll"
+    Info (12134): Parameter "operation_mode" = "NORMAL"
+    Info (12134): Parameter "pll_type" = "AUTO"
+    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
+    Info (12134): Parameter "port_areset" = "PORT_USED"
+    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info (12134): Parameter "port_configupdate" = "PORT_UNUSED"
+    Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_locked" = "PORT_USED"
+    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasedone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasestep" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pllena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclk" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandata" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandataout" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanread" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
+    Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
+    Info (12134): Parameter "width_clock" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
+    Info (12023): Found entity 1: PLL_altpll File: E:/Mega/Facultad/FPGA/Laboratorio6/db/pll_altpll.v Line: 31
+Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:PLL1|altpll:altpll_component|PLL_altpll:auto_generated" File: c:/altera_lite/15.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "MUX_4_1" for hierarchy "MUX_4_1:\REG_ADDR:11:MUX_ADDR" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 64
+Info (12128): Elaborating entity "Control_RAM_FSM" for hierarchy "Control_RAM_FSM:RAM_FSM" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 74
+Info (12128): Elaborating entity "Top_FSM" for hierarchy "Top_FSM:Gral_FSM" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 88
+Info (12128): Elaborating entity "FF_D_RISING" for hierarchy "FF_D_RISING:LEDRD" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 110
+Info (12128): Elaborating entity "DATA_BUFFER" for hierarchy "DATA_BUFFER:ADDR_TO_7SEG" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at DATA_BUFFER.vhd(23): signal "CLEAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Mega/Facultad/FPGA/Laboratorio6/DATA_BUFFER.vhd Line: 23
+Info (12128): Elaborating entity "DEC_HEX_7SEG" for hierarchy "DEC_HEX_7SEG:DISP0OUT" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 129
+Info (12128): Elaborating entity "LFSR_12" for hierarchy "LFSR_12:LFSR" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 133
+Info (12128): Elaborating entity "DF_HZ" for hierarchy "DF_HZ:Gen1HZ" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 140
+Info (12128): Elaborating entity "DEC_HEX_7SEG" for hierarchy "DF_HZ:Gen1HZ|DEC_HEX_7SEG:DEC1" File: E:/Mega/Facultad/FPGA/Laboratorio6/DF_HZ.vhd Line: 113
+Info (12128): Elaborating entity "FF_D_FALLING" for hierarchy "FF_D_FALLING:\RISING_BTS:0:BT" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 150
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 160
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:ROM1|altsyncram:altsyncram_component" File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 60
+Info (12130): Elaborated megafunction instantiation "ROM:ROM1|altsyncram:altsyncram_component" File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 60
+Info (12133): Instantiated megafunction "ROM:ROM1|altsyncram:altsyncram_component" with the following parameter: File: E:/Mega/Facultad/FPGA/Laboratorio6/ROM.vhd Line: 60
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -755,13 +1211,13 @@ Info (12133): Instantiated megafunction "ROM:ROM1|altsyncram:altsyncram_componen
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9sq3.tdf
-    Info (12023): Found entity 1: altsyncram_9sq3 File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/db/altsyncram_9sq3.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_9sq3 File: E:/Mega/Facultad/FPGA/Laboratorio6/db/altsyncram_9sq3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_9sq3" for hierarchy "ROM:ROM1|altsyncram:altsyncram_component|altsyncram_9sq3:auto_generated" File: c:/altera_lite/15.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "Comparador" for hierarchy "Comparador:COMP" File: C:/Users/Daniela/Dropbox/Laura/Gabriel/Semestre 9/FPGA/Laboratorio6/Laboratorio6.vhd Line: 160
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 819 megabytes
-    Info: Processing ended: Sun Jun 12 19:59:28 2016
+Info (12128): Elaborating entity "Comparador" for hierarchy "Comparador:COMP" File: E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd Line: 166
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 864 megabytes
+    Info: Processing ended: Mon Jun 13 18:23:53 2016
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Total CPU time (on all processors): 00:00:37
 
 
