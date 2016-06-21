@@ -20,15 +20,75 @@
 					"strict" : false
 				},
 				{
-					"name" : "RDWR",
-					"strict" : false
-				},
-				{
 					"name" : "CE",
 					"strict" : false
 				},
 				{
 					"name" : "OE",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_BUS2[15]",
 					"strict" : false
 				},
 				{
@@ -164,6 +224,70 @@
 					"strict" : false
 				},
 				{
+					"name" : "RAM_STATE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_STATE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_STATE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_STATE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_STATE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_STATE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "TOP_STATE[9]",
+					"strict" : false
+				},
+				{
 					"name" : "DATA_BUS[0]",
 					"strict" : false
 				},
@@ -233,6 +357,10 @@
 				},
 				{
 					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "LLAVE",
 					"strict" : false
 				},
 				{

@@ -16,44 +16,34 @@ entity Control_RAM_FSM is
 	WE					: out	std_logic;
 	UB					: out	std_logic;
 	LB					: out	std_logic;
-	Ready				: out	std_logic
+	Ready				: out	std_logic;
+	STATE				: OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
 	);
 end Control_RAM_FSM;
 
 architecture beh of Control_RAM_FSM is
 
 --constantes y señales
-signal contador:		 unsigned(3 downto 0)	:= "0000";
 
 type FSM_states is (IDLE, INIT_RD, INIT_WR, END_RD, END_WR, WAIT_WR);
 signal current_state,next_state:FSM_states;
 
 begin
-PROXIMO_ESTADO: process(current_state,En,Rd_Wr,contador,Ext_ready)
+PROXIMO_ESTADO: process(current_state,En,Rd_Wr,Ext_ready)
 begin
 	case current_state is
 		when IDLE =>
 			if (En='0') then
 				next_state <= IDLE;
-			else
-				if (Rd_Wr='0') then
+			elsif (Rd_Wr='0') then
 					next_state <= INIT_RD;
 				else
 					next_state <= INIT_WR;
-				end if;
 			end if;
 		when INIT_RD =>
-			if  (contador = "1010") then
 				next_state <= END_RD;
-			else
-				next_state <= INIT_RD;
-			end if;
 		when INIT_WR =>
-			if (contador = "0101") then
 				next_state <= WAIT_WR;
-			else
-				next_state <= INIT_WR;
-			end if;
 		when WAIT_WR =>
 			if  (Ext_ready = '1') then
 				next_state <= END_WR;
@@ -67,11 +57,7 @@ begin
 				next_state <= END_RD;
 			end if;			
 		when END_WR =>
-			if  (contador = "1010") then
 				next_state <= IDLE;
-			else
-				next_state <= END_WR;
-			end if;
 		when others =>
 			next_state <= IDLE;
 	end case;
@@ -95,6 +81,7 @@ begin
 		OE				<= '1';				
 		WE				<= '1';			
 		Ready			<= '0';
+		STATE			<= "000000";
 	elsif (rising_edge(clk)) then
 		case current_state is
 			when IDLE =>
@@ -102,35 +89,38 @@ begin
 				OE				<= '1';				
 				WE				<= '1';			
 				Ready			<= '0';
-				contador		<= "0000";
+				STATE			<= "000001";
 			when INIT_RD =>
 				CE				<= '0';
 				OE				<= '0';
 				WE				<= '1';
 				Ready			<= '0';
-				contador		<= contador + 1;
+				STATE			<= "000010";
 			when INIT_WR =>
 				CE				<= '0';
 				OE				<= '1';				
 				WE				<= '0';			
 				Ready			<= '0';
-				contador		<= contador + 1;
+				STATE			<= "000100";
 			when WAIT_WR =>	
 				CE				<= '0';
 				OE				<= '1';
 				WE				<= '0';
-				Ready			<= '1';			
+				Ready			<= '1';
+				STATE			<= "001000";
 			when END_RD =>	
 				CE				<= '0';
 				OE				<= '0';
 				WE				<= '1';
 				Ready			<= '1';
+				STATE			<= "010000";
 			when END_WR =>	
 				CE				<= '0';
 				OE				<= '1';
 				WE				<= '0';
-				Ready			<= '1';
-				contador		<= contador + 1;
+				Ready			<= '0';
+				STATE			<= "100000";
+			when others => null;
 		end case;
 	end if;
 end process;

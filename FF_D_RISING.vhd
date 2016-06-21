@@ -21,13 +21,14 @@ architecture flow of FF_D_RISING is
 begin
 	ff_d_clk: process (Clk, Set, Reset,En)
 	begin
-		if	(En='0') then null;
-		elsif (Set='1') then				
+		if (Set='1') then				
 				Q<='1';
 		elsif (Reset='1') then
 				Q<='0';
-		elsif (rising_edge(Clk)) then
+		elsif	(En='1') then
+			if (rising_edge(Clk)) then
 				Q<=D;
+			end if;
 		end if;
 	end process;
 end flow;
