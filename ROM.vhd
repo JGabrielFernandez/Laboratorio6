@@ -142,5 +142,5 @@ END SYN;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL ROM.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL ROM.cmp TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL ROM.bsf FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL ROM_inst.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ROM_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: altera_mf

@@ -2,57 +2,49 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'FF_D_FALLING:\RISING_BTS:0:BT|Q'
-Slack : -4.524
-TNS   : -34.003
-
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -2.668
-TNS   : -196.907
+Slack : -2.699
+TNS   : -193.510
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
 Slack : 0.385
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'FF_D_FALLING:\RISING_BTS:0:BT|Q'
-Slack : 0.790
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Recovery 'BOTONES[2]'
-Slack : -1.769
-TNS   : -1.769
-
-Type  : Slow 1200mV 85C Model Recovery 'BOTONES[1]'
-Slack : -1.752
-TNS   : -1.752
+Type  : Slow 1200mV 85C Model Recovery 'CLK'
+Slack : -0.523
+TNS   : -6.384
 
 Type  : Slow 1200mV 85C Model Recovery 'BOTONES[0]'
-Slack : -1.493
-TNS   : -1.493
+Slack : -0.126
+TNS   : -0.126
 
-Type  : Slow 1200mV 85C Model Recovery 'CLK'
-Slack : -1.051
-TNS   : -13.031
+Type  : Slow 1200mV 85C Model Recovery 'BOTONES[1]'
+Slack : -0.055
+TNS   : -0.055
 
-Type  : Slow 1200mV 85C Model Removal 'CLK'
-Slack : 0.945
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Recovery 'BOTONES[2]'
+Slack : -0.043
+TNS   : -0.043
 
-Type  : Slow 1200mV 85C Model Removal 'BOTONES[0]'
-Slack : 1.939
+Type  : Slow 1200mV 85C Model Removal 'BOTONES[2]'
+Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'BOTONES[1]'
-Slack : 2.213
+Slack : 0.392
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'BOTONES[2]'
-Slack : 2.222
+Type  : Slow 1200mV 85C Model Removal 'BOTONES[0]'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLK'
+Slack : 0.591
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -208.982
+TNS   : -226.972
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BOTONES[0]'
 Slack : -3.000
@@ -66,61 +58,49 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BOTONES[2]'
 Slack : -3.000
 TNS   : -4.285
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FF_D_FALLING:\RISING_BTS:0:BT|Q'
-Slack : 0.438
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'FF_D_FALLING:\RISING_BTS:0:BT|Q'
-Slack : -4.198
-TNS   : -31.354
-
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -2.366
-TNS   : -167.657
+Slack : -2.357
+TNS   : -162.696
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
 Slack : 0.338
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'FF_D_FALLING:\RISING_BTS:0:BT|Q'
-Slack : 0.760
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'BOTONES[2]'
-Slack : -1.544
-TNS   : -1.544
-
-Type  : Slow 1200mV 0C Model Recovery 'BOTONES[1]'
-Slack : -1.475
-TNS   : -1.475
+Type  : Slow 1200mV 0C Model Recovery 'CLK'
+Slack : -0.366
+TNS   : -4.392
 
 Type  : Slow 1200mV 0C Model Recovery 'BOTONES[0]'
-Slack : -1.246
-TNS   : -1.246
+Slack : -0.095
+TNS   : -0.095
 
-Type  : Slow 1200mV 0C Model Recovery 'CLK'
-Slack : -0.848
-TNS   : -10.458
+Type  : Slow 1200mV 0C Model Recovery 'BOTONES[1]'
+Slack : -0.047
+TNS   : -0.047
 
-Type  : Slow 1200mV 0C Model Removal 'CLK'
-Slack : 0.851
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Recovery 'BOTONES[2]'
+Slack : -0.044
+TNS   : -0.044
 
-Type  : Slow 1200mV 0C Model Removal 'BOTONES[0]'
-Slack : 1.738
+Type  : Slow 1200mV 0C Model Removal 'BOTONES[2]'
+Slack : 0.390
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'BOTONES[1]'
-Slack : 2.004
+Slack : 0.391
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'BOTONES[2]'
-Slack : 2.066
+Type  : Slow 1200mV 0C Model Removal 'BOTONES[0]'
+Slack : 0.488
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLK'
+Slack : 0.537
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -207.926
+TNS   : -225.916
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BOTONES[0]'
 Slack : -3.000
@@ -134,76 +114,60 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BOTONES[2]'
 Slack : -3.000
 TNS   : -4.285
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FF_D_FALLING:\RISING_BTS:0:BT|Q'
-Slack : 0.363
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'FF_D_FALLING:\RISING_BTS:0:BT|Q'
-Slack : -1.977
-TNS   : -14.010
-
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -0.910
-TNS   : -38.077
+Slack : -1.479
+TNS   : -32.641
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
 Slack : 0.174
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'FF_D_FALLING:\RISING_BTS:0:BT|Q'
-Slack : 0.442
+Type  : Fast 1200mV 0C Model Recovery 'CLK'
+Slack : 0.235
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'BOTONES[0]'
+Slack : 0.549
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'BOTONES[1]'
-Slack : -0.431
-TNS   : -0.431
-
-Type  : Fast 1200mV 0C Model Recovery 'BOTONES[2]'
-Slack : -0.416
-TNS   : -0.416
-
-Type  : Fast 1200mV 0C Model Recovery 'BOTONES[0]'
-Slack : -0.290
-TNS   : -0.290
-
-Type  : Fast 1200mV 0C Model Recovery 'CLK'
-Slack : -0.016
-TNS   : -0.192
-
-Type  : Fast 1200mV 0C Model Removal 'CLK'
-Slack : 0.461
+Slack : 0.590
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Removal 'BOTONES[0]'
-Slack : 0.984
+Type  : Fast 1200mV 0C Model Recovery 'BOTONES[2]'
+Slack : 0.613
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'BOTONES[2]'
-Slack : 1.087
-TNS   : 0.000
+Slack : -0.056
+TNS   : -0.056
 
 Type  : Fast 1200mV 0C Model Removal 'BOTONES[1]'
-Slack : 1.109
+Slack : -0.029
+TNS   : -0.029
+
+Type  : Fast 1200mV 0C Model Removal 'BOTONES[0]'
+Slack : 0.027
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLK'
+Slack : 0.282
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -147.067
+TNS   : -162.006
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BOTONES[2]'
 Slack : -3.000
-TNS   : -4.147
+TNS   : -4.507
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BOTONES[1]'
 Slack : -3.000
-TNS   : -4.043
+TNS   : -4.487
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BOTONES[0]'
 Slack : -3.000
-TNS   : -4.037
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FF_D_FALLING:\RISING_BTS:0:BT|Q'
-Slack : 0.393
-TNS   : 0.000
+TNS   : -4.433
 
 ------------------------------------------------------------

@@ -8,57 +8,57 @@ ENTITY Laboratorio6 IS
 		RESET		:	IN	STD_LOGIC;
 		CLK		:	IN	STD_LOGIC;
 		BOTONES	: 	IN	STD_LOGIC_VECTOR(2 DOWNTO 0);				-- Boton(2): Continuar cuando error; Boton(1): Lectura; Boton(0): Escritura;
+		LLAVE		:	IN	STD_LOGIC;
 		
 		LED_WRITE:	OUT	STD_LOGIC;
 		LED_READ	:	OUT	STD_LOGIC;
 		LED_ERROR:	OUT	STD_LOGIC;
 		
 		WE			:	OUT	STD_LOGIC;
-		RDWR		:	OUT	STD_LOGIC;
 		CE			:	OUT	STD_LOGIC;
 		OE			:	OUT	STD_LOGIC;
 		LB			:	OUT	STD_LOGIC;
 		UB			:	OUT	STD_LOGIC;
 		DATA_BUS	:	INOUT	STD_LOGIC_VECTOR(data_width-1 DOWNTO 0);
+		DATA_BUS2:	OUT	STD_LOGIC_VECTOR(data_width-1 DOWNTO 0);
+		GND		:	OUT	STD_LOGIC;
 		ADDRESS	:	OUT	STD_LOGIC_VECTOR(RAM_addr_width-1 DOWNTO 0);
 		
 		DISP0		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
 		DISP1		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
-		DISP2		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0)
+		DISP2		:	OUT	STD_LOGIC_VECTOR(6 DOWNTO 0);
+		
+		RAM_STATE:	OUT	STD_LOGIC_VECTOR(5 DOWNTO 0);
+		TOP_STATE:	OUT	STD_LOGIC_VECTOR(9 DOWNTO 0)
 		);
 END ENTITY;
 
 ARCHITECTURE BEH OF Laboratorio6 IS
 
-SIGNAL CLK1HZ,CLK1GHZ			:	STD_LOGIC;
+SIGNAL CLK1HZ						:	STD_LOGIC;
 SIGNAL ADDR,ADDR_LFSR			:	STD_LOGIC_VECTOR(addr_width-1 DOWNTO 0);
 SIGNAL ADDR_FSM					:	STD_LOGIC_VECTOR(RAM_addr_width-1 DOWNTO 0);
 SIGNAL BTS							: 	STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL READY_MEM, READY_GRAL	:	STD_LOGIC;
 SIGNAL RDWRINT,ENRDWR			:	STD_LOGIC;
 SIGNAL COMPOUT						:	STD_LOGIC;
-SIGNAL ADDR_SEL, BTSET			:	STD_LOGIC;
+SIGNAL ADDR_SEL,BTSET,DATA_SEL:	STD_LOGIC;
 SIGNAL LEDR							:	STD_LOGIC;
 SIGNAL SETLFSR,ENLFSR			:	STD_LOGIC;
 SIGNAL ADDR2SHOW					:	STD_LOGIC_VECTOR(addr_width-1 DOWNTO 0);
 SIGNAL EN7SEG						:	STD_LOGIC;
 SIGNAL DATA_ROM					:	STD_LOGIC_VECTOR(data_width-1 DOWNTO 0);
-
-signal sel_aux						:	std_logic_vector(1 downto 0);
+SIGNAL DATA_BUS_AUX				:	STD_LOGIC_VECTOR(data_width-1 DOWNTO 0);
+signal sel_aux,seld_aux			:	std_logic_vector(1 downto 0);
 
 BEGIN
 ADDRESS(RAM_addr_width-1 downto addr_width)<= (others=>'0');
 ADDRESS(addr_width-1 downto 0)<= ADDR;
-RDWR<=RDWRINT;
-DATA_BUS <= DATA_ROM WHEN (RDwRINT='1') ELSE (OTHERS=>'Z') ;
+DATA_BUS <= DATA_BUS_AUX WHEN (RDWRINT='1') ELSE (OTHERS=>'Z') ;
+DATA_BUS2 <= DATA_BUS_AUX;
 sel_aux <= ('0',ADDR_SEL);
-
-PLL1:	PLL PORT MAP(
-		areset		=> RESET,
-		inclk0		=> CLK,
-		c0				=> CLK1GHZ,
-		locked		=> OPEN
-	);
+seld_aux <= ('0',DATA_SEL);
+GND <= '0';
 
 REG_ADDR: for i in addr_width-1 downto 0 generate
 	MUX_ADDR: MUX_4_1 port map(
@@ -71,8 +71,19 @@ REG_ADDR: for i in addr_width-1 downto 0 generate
 	);
 end generate;
 
+REG_DATA: for i in data_width-1 downto 0 generate
+	MUX_DATA: MUX_4_1 port map(
+		in0	=>	DATA_ROM(i),
+		in1	=>	'0',
+		in2	=>	'0',
+		in3	=>	'0',
+		sel	=>	seld_aux,
+		out1	=>	DATA_BUS_AUX(i)
+	);
+end generate;
+
 RAM_FSM: Control_RAM_FSM port map(
-	Clk				=>	CLK1GHZ,
+	Clk				=>	CLK,
 	Ext_ready		=>	READY_GRAL,
 	Reset				=>	RESET,
 	Rd_Wr				=>	RDWRINT,
@@ -82,19 +93,23 @@ RAM_FSM: Control_RAM_FSM port map(
 	WE					=>	WE,
 	UB					=>	UB,
 	LB					=>	LB,
-	Ready				=>	READY_MEM
+	Ready				=>	READY_MEM,
+	STATE				=>	RAM_STATE
 	);
 
 Gral_FSM: Top_FSM port map(
 	--inputs
-	Clk			=>	CLK1GHZ,
+	Clk			=>	CLK,
 	Rst			=>	RESET,
 	botones		=>	BTS,
+	llave			=> LLAVE,
 	ready			=>	READY_MEM,
 	cmd			=>	COMPOUT,	
+	LFSR_ADDRESS=>	ADDR,
 	--outputs
 	ADDRESS		=>	ADDR_FSM,
 	ADDR_SEL		=> ADDR_SEL,
+	DATA_SEL		=>	DATA_SEL,
 	SetBotones	=>	BTSET,
 	RD_WR 		=>	RDWRINT,
 	ENRD_WR 		=>	ENRDWR,
@@ -104,7 +119,8 @@ Gral_FSM: Top_FSM port map(
 	EN_LFSR		=>	ENLFSR,
 	Led_RD		=>	LEDR,
 	Led_error	=>	LED_ERROR,
-	EN_7Segm		=>	EN7SEG
+	EN_7Segm		=>	EN7SEG,
+	STATE			=>	TOP_STATE
 	);
 
 LEDRD:	FF_D_RISING port map
@@ -121,7 +137,7 @@ ADDR_TO_7SEG: DATA_BUFFER GENERIC MAP(addr_width)
 	PORT MAP(
 	DATAIN	=> ADDR,
 	EN			=> EN7SEG,
-	CLK		=> CLK1GHZ,
+	CLK		=> CLK,
 	CLEAR		=> '0',
 	DATAOUT	=> ADDR2SHOW
 	);
@@ -131,7 +147,7 @@ DISP1OUT:	DEC_HEX_7SEG PORT MAP(ADDR2SHOW(7 DOWNTO 4), DISP1);
 DISP2OUT:	DEC_HEX_7SEG PORT MAP(ADDR2SHOW(11 DOWNTO 8),DISP2);
 
 LFSR: LFSR_12 port map(
-		Clk	=> CLK1GHZ,
+		Clk	=> CLK,
 		Set	=> SETLFSR,
 		En		=> ENLFSR,
 		b		=>	ADDR_LFSR
@@ -146,6 +162,7 @@ Gen1HZ: DF_HZ port map(
 		display1		=>	OPEN,
 		display0		=>	OPEN
 	);
+
 RISING_BTS :FOR i IN 0 TO 2 GENERATE
 	BT: FF_D_FALLING port map
 	(
@@ -159,7 +176,7 @@ END GENERATE;
 
 ROM1: ROM	PORT MAP(
 		address	=> ADDR,
-		clock		=> CLK1GHZ,
+		clock		=> CLK,
 		q			=> DATA_ROM
 	);
 	

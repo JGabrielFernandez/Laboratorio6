@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sun Jun 12 19:04:09 2016
+Fitter Status : Successful - Tue Jun 21 12:47:36 2016
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : Laboratorio6
 Top-level Entity Name : Laboratorio6
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 225 / 114,480 ( < 1 % )
-    Total combinational functions : 205 / 114,480 ( < 1 % )
-    Dedicated logic registers : 113 / 114,480 ( < 1 % )
-Total registers : 113
-Total pins : 71 / 529 ( 13 % )
+Total logic elements : 227 / 114,480 ( < 1 % )
+    Total combinational functions : 200 / 114,480 ( < 1 % )
+    Dedicated logic registers : 127 / 114,480 ( < 1 % )
+Total registers : 127
+Total pins : 104 / 529 ( 20 % )
 Total virtual pins : 0
 Total memory bits : 65,536 / 3,981,312 ( 2 % )
 Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )

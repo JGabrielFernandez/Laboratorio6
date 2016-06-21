@@ -9,12 +9,15 @@ port(
 	Clk			: in	std_logic;
 	Rst			: in	std_logic;
 	botones		: in	std_logic_vector(2 downto 0);				-- Boton(2): Continuar cuando error; Boton(1): Lectura; Boton(0): Escritura;
+	llave			: in	std_logic;
 	ready			: in	std_logic;										-- Handshake
 	cmd			: in	std_logic;										-- Bit que indica si los datos son iguales en la lectura.
-	
+	LFSR_ADDRESS: in	std_logic_vector(addr_width-1 downto 0);	
+
 	ADDRESS		: out std_logic_vector(RAM_addr_width-1 downto 0);
 	SetBotones	: out	std_logic;
 	ADDR_SEL		: out std_logic;										--
+	DATA_SEL		: out std_logic;
 	RD_WR 		: out std_logic;										--
 	ENRD_WR 		: out std_logic;										--
 	Ext_ready 	: out std_logic;										--
@@ -23,7 +26,8 @@ port(
 	EN_LFSR		: out std_logic;										-- Suma LFSR
 	LED_RD		: out std_logic;										-- Enable del led de 1 HZ al finalizar la lectura
 	Led_error	: out std_logic;										-- Led rojo cuando no coinciden las memorias
-	EN_7Segm		: out std_logic										-- Enable 7 segmentos, mostrar direccion del error
+	EN_7Segm		: out std_logic;										-- Enable 7 segmentos, mostrar direccion del error
+	STATE				: OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
 );
 end Top_FSM;
 
@@ -33,17 +37,17 @@ architecture beh of Top_FSM is
  type FSM_states_RDWR is (IDLE, INITWR,ESPERAWR, LOADDATA, PRENDERLED, INITRD, ESPERARD, COMPARE, FINRD, ERROR_DATO, BLINK_LED);
  signal current_state,next_state:FSM_states_RDWR;
 
- signal direccion: std_logic_vector(RAM_addr_width-1 downto 0);
+ signal direccion: unsigned(RAM_addr_width-1 downto 0);
 
  begin
- ADDRESS <= direccion;
- PROXIMO_ESTADO: process(current_state,Botones,ready,direccion,cmd)
+ ADDRESS <= std_logic_vector(direccion);
+ PROXIMO_ESTADO: process(current_state,Botones,ready,direccion,cmd,LFSR_ADDRESS)
  begin
 	case current_state is
 		when IDLE =>
-			if (botones = "110") then
+			if (botones(0) = '0') then
 				next_state <= INITWR;			
-			elsif (botones = "101") then
+			elsif (botones(1) = '0') then
 				next_state <= INITRD;
 			else
 				next_state <= IDLE;
@@ -82,13 +86,13 @@ architecture beh of Top_FSM is
 				next_state <= FINRD;
 			end if;
 		when FINRD =>
-			if (direccion(addr_width-1 downto 0)=(addr_width-1 downto 0=>'1')) then
+			if (LFSR_ADDRESS=(addr_width-1 downto 0=>'1')) then
 				next_state <= BLINK_LED;
 			else
 				next_state <= ESPERARD;
 			end if;
 		when ERROR_DATO =>
-			if (Botones = "011") then
+			if (Botones(2) = '0') then
 				next_state <= FINRD;
 			else 
 				next_state <= ERROR_DATO;
@@ -109,85 +113,101 @@ begin
 	end if;
 end process;
 
-Output: process(Rst,current_state,clk)
+Output: process(Rst,current_state,clk,direccion)
 begin
 	if (Rst='1') then
+		DATA_SEL		<= '0';
 		ADDR_SEL		<= '0';
 		direccion 	<= (RAM_addr_width-1 downto 0=>'0');
 		RD_WR 		<= '0';
 		ENRD_WR 		<= '0';
 		Ext_ready 	<= '0';
 		LED_FinWR	<= '0';
-		LOADDIR 		<= '0';
+		LOADDIR 		<= '1';
 		EN_LFSR		<= '0';
-		LED_RD		<= '0';
+		LED_RD		<= '1';
 		Led_error	<= '0';
 		EN_7Segm		<= '0';
 		SetBotones	<=	'1';
+		STATE 		<= "0000000000";
 	elsif (rising_edge(Clk)) then
+		RD_WR 		<= '0';
+		Ext_ready 	<= '0';
 		ADDR_SEL		<= '0';
 		SetBotones	<=	'0';
+		DATA_SEL		<= '0';
+		LOADDIR 		<= '0';
+		EN_7Segm		<= '0';
+		ENRD_WR 		<= '0';
+		EN_LFSR 		<= '0';
 		case current_state is
 			when IDLE =>
 				direccion	<= (RAM_addr_width-1 downto 0=>'0');
+				LOADDIR 		<= '1';
 				RD_WR 		<= '0';
-				ENRD_WR 		<= '0';
-				Ext_ready 	<= '0';
-				SetBotones	<=	'0';
+				STATE <= "0000000001";
 			when INITWR =>
-				direccion 	<= std_logic_vector(unsigned(direccion)+1);
+				direccion 	<= direccion+1;
 				RD_WR 		<= '1';
 				ENRD_WR 		<= '1';
-				Ext_ready 	<= '0';
 				LED_FinWR 	<= '0';
-				LED_RD	 	<= '0';
+				LED_RD	 	<= '1';
 				SetBotones	<=	'1';
+				STATE <= "0000000010";
 			when ESPERAWR =>
 				RD_WR 		<= '1';
 				ENRD_WR 		<= '1';
-				Ext_ready 	<= '0';
+				STATE <= "0000000100";
+				if(direccion=to_unsigned(617,RAM_addr_width) AND llave='1') then
+					DATA_SEL <='1';
+				end if;
 			when LOADDATA =>
 				RD_WR 		<= '1';
 				ENRD_WR 		<= '1';
 				Ext_ready 	<= '1';
+				STATE <= "0000001000";
+				if(direccion=to_unsigned(617,RAM_addr_width) AND llave='1') then
+					DATA_SEL <='1';
+				end if;
 			when PRENDERLED =>
 				RD_WR 		<= '1';
-				ENRD_WR 		<= '0';
-				Ext_ready 	<= '0';
 				LED_FinWR 	<= '1';
+				STATE <= "0000010000";
 	-----------------------------------------------------------------------abajo lectura, arriba escritura			
 			when INITRD =>
-				LOADDIR 		<= '1';
-				RD_WR 		<= '0';
 				ENRD_WR 		<= '1';
-				EN_LFSR 		<= '0';
 				ADDR_SEL		<= '1';
 				LED_FinWR 	<= '0';
-				LED_RD	 	<= '0';
+				LED_RD	 	<= '1';
 				SetBotones	<=	'1';
+				STATE <= "0000100000";
+				EN_LFSR		<= '1';
 			when ESPERARD =>
-				RD_WR 		<= '0';
 				ENRD_WR 		<= '1';
-				EN_LFSR		<= '0';
 				ADDR_SEL		<= '1';
+				STATE <= "0001000000";
 			when COMPARE =>
 				Ext_ready 	<= '0';
 				ADDR_SEL		<= '1';
+				STATE <= "0010000000";
 			when FINRD =>
-				Ext_ready 	<= '1';
 				EN_LFSR		<= '1';
+				Ext_ready 	<= '1';
 				Led_error	<= '0';
 				EN_7Segm		<=	'0';
 				ADDR_SEL		<= '1';
+				STATE <= "0100000000";
+				SetBotones	<=	'1';
 			when ERROR_DATO =>
 				Led_error	<= '1';
 				EN_7Segm		<=	'1';
 				ADDR_SEL		<= '1';
+				STATE <= "1000000000";
 			when BLINK_LED =>
-				EN_LFSR		<= '0';
-				LED_RD		<= '1';
+				LED_RD		<= '0';
 				ADDR_SEL		<= '1';
-			when others =>	null;
+				STATE <= "0000000001";
+			when others =>	STATE <= "1111111111";
 		end case;
 	end if;
  end process;

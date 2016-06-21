@@ -19,9 +19,9 @@ vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/Top_FSM.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6.vhd}
 vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/LFSR_12.vhd}
 
-vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/Laboratorio6_TB.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio6/LECTURA_TB.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  Laboratorio6_TB
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  LECTURA_TB
 
 add wave *
 view structure

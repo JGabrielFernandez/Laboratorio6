@@ -1,5 +1,5 @@
 Flow report for Laboratorio6
-Mon Jun 13 18:23:53 2016
+Tue Jun 21 15:34:13 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 13 18:23:53 2016       ;
+; Flow Status                        ; Successful - Tue Jun 21 15:34:13 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; Laboratorio6                                ;
 ; Top-level Entity Name              ; Laboratorio6                                ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/13/2016 18:23:37 ;
+; Start date & time ; 06/21/2016 15:33:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio6        ;
 +-------------------+---------------------+
@@ -76,29 +76,30 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id         ;
 +--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
-; COMPILER_SIGNATURE_ID                ; 23084203634910.146585301727600        ; --            ; --          ; --                 ;
+; COMPILER_SIGNATURE_ID                ; 23084203634910.146653403801444        ; --            ; --          ; --                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; LECTURA_TB         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; LFSR_12_TB         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Laboratorio6_TB    ;
+; EDA_DESIGN_INSTANCE_NAME             ; LAB6                                  ; --            ; --          ; Laboratorio6_TB    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Control_RAM_FSM_TB ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Laboratorio6_TB                       ; --            ; --          ; eda_simulation     ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; LECTURA_TB                            ; --            ; --          ; eda_simulation     ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation     ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --                 ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_FILE                  ; LECTURA_TB.vhd                        ; --            ; --          ; LECTURA_TB         ;
 ; EDA_TEST_BENCH_FILE                  ; LFSR_12_TB.vhd                        ; --            ; --          ; LFSR_12_TB         ;
 ; EDA_TEST_BENCH_FILE                  ; Laboratorio6_TB.vhd                   ; --            ; --          ; Laboratorio6_TB    ;
 ; EDA_TEST_BENCH_FILE                  ; Control_RAM_FSM_TB.vhd                ; --            ; --          ; Control_RAM_FSM_TB ;
+; EDA_TEST_BENCH_MODULE_NAME           ; LECTURA_TB                            ; --            ; --          ; LECTURA_TB         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; LFSR_12_TB                            ; --            ; --          ; LFSR_12_TB         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Laboratorio6_TB                       ; --            ; --          ; Laboratorio6_TB    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Control_RAM_FSM_TB                    ; --            ; --          ; Control_RAM_FSM_TB ;
 ; EDA_TEST_BENCH_NAME                  ; Control_RAM_FSM_TB                    ; --            ; --          ; eda_simulation     ;
 ; EDA_TEST_BENCH_NAME                  ; LFSR_12_TB                            ; --            ; --          ; eda_simulation     ;
 ; EDA_TEST_BENCH_NAME                  ; Laboratorio6_TB                       ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_NAME                  ; LECTURA_TB                            ; --            ; --          ; eda_simulation     ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --                 ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --                 ;
-; MISC_FILE                            ; ROM_inst.vhd                          ; --            ; --          ; --                 ;
 ; MISC_FILE                            ; ROM.cmp                               ; --            ; --          ; --                 ;
-; MISC_FILE                            ; PLL/PLL.cmp                           ; --            ; --          ; --                 ;
-; MISC_FILE                            ; PLL/PLL.ppf                           ; --            ; --          ; --                 ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --                 ;
 ; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top                ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top                ;
@@ -114,8 +115,8 @@ agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:17     ; 1.0                     ; 864 MB              ; 00:00:37                           ;
-; Total                  ; 00:00:17     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Elaboration ; 00:00:16     ; 1.0                     ; 859 MB              ; 00:00:38                           ;
+; Total                  ; 00:00:16     ; --                      ; --                  ; 00:00:38                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

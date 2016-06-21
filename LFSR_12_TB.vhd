@@ -12,7 +12,6 @@ component LFSR_12 is
 		-- Input ports
 		Clk	: in  std_logic;		--Entrada de reloj
 		Set	: in	std_logic;		--Entrada de seteo
-		Reset	: in	std_logic;
 		En		: in	std_logic;
 
 		-- Output ports
@@ -20,7 +19,7 @@ component LFSR_12 is
 	);
 end component;
 
-signal Clk, Set, Reset,En	: std_logic;
+signal Clk, Set,En	: std_logic;
 signal b				: std_logic_vector(11 downto 0);
 
 begin
@@ -28,7 +27,6 @@ begin
 	LFSR1: LFSR_12 port map(
 									Clk=>Clk,
 									Set=>Set,
-									Reset=>Reset,
 									En=>En,
 									b=>b
 									);
@@ -37,7 +35,6 @@ begin
 	begin
 		Set <= '1';
 		En <= '1';
-		Reset<= '0';
 		wait for 50ns;
 		Set <= '0';
 		for i in 0 to 4097 loop

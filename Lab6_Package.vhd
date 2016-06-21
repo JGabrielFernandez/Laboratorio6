@@ -30,7 +30,8 @@ component Control_RAM_FSM is
 	WE					: out	std_logic;
 	UB					: out	std_logic;
 	LB					: out	std_logic;
-	Ready				: out	std_logic
+	Ready				: out	std_logic;
+	STATE				: OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
 	);
 end component;
 
@@ -40,12 +41,15 @@ port(
 	Clk			: in	std_logic;
 	Rst			: in	std_logic;
 	botones		: in	std_logic_vector(2 downto 0);				-- Boton(2): Continuar cuando error; Boton(1): Lectura; Boton(0): Escritura;
+	llave			: in	std_logic;
 	ready			: in	std_logic;										-- Handshake
 	cmd			: in	std_logic;										-- Bit que indica si los datos son iguales en la lectura.										-- Bit que indica si se llego al final de la lectura.
+	LFSR_ADDRESS: in	std_logic_vector(addr_width-1 downto 0);	
 	--outputs
 	ADDRESS		: out std_logic_vector(RAM_addr_width-1 downto 0);
 	SetBotones	: out	std_logic;
-	ADDR_SEL		: out std_logic;										--
+	ADDR_SEL		: out std_logic;
+	DATA_SEL		: out std_logic;	--
 	RD_WR 		: out std_logic;										--
 	ENRD_WR 		: out std_logic;										--
 	Ext_ready 	: out std_logic;										--
@@ -54,7 +58,8 @@ port(
 	EN_LFSR		: out std_logic;										-- Suma LFSR
 	Led_RD		: out std_logic;										-- Enable del led de 1 HZ al finalizar la lectura
 	Led_error	: out std_logic;										-- Led rojo cuando no coinciden las memorias
-	EN_7Segm		: out std_logic										-- Enable 7 segmentos, mostrar direccion del error
+	EN_7Segm		: out std_logic;										-- Enable 7 segmentos, mostrar direccion del error
+	STATE				: OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
 );
 end component;
 
